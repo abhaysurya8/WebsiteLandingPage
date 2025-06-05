@@ -10,7 +10,7 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className="bg-white/90 backdrop-blur-sm shadow-sm border-b border-gray-100 sticky top-0 z-50">
+      <nav className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 md:h-20">
             {/* Logo/Brand */}
@@ -20,24 +20,10 @@ export default function Navigation() {
               </h1>
             </div>
             
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Hidden for minimalist design */}
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
-                <a href="#home" className="font-quicksand text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-                  Home
-                </a>
-                <a href="#about" className="font-quicksand text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-                  About
-                </a>
-                <a href="#services" className="font-quicksand text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-                  Services
-                </a>
-                <a href="#contact" className="font-quicksand text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium transition-colors">
-                  Contact
-                </a>
-                <button className="font-quicksand bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-sm font-medium transition-colors">
-                  Get Started
-                </button>
+                {/* Menu items hidden to match the minimalist design */}
               </div>
             </div>
             
@@ -46,7 +32,7 @@ export default function Navigation() {
               <button
                 type="button"
                 onClick={toggleMobileMenu}
-                className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brown-500"
               >
                 <span className="sr-only">Open main menu</span>
                 {isMobileMenuOpen ? (
@@ -66,36 +52,24 @@ export default function Navigation() {
               <a
                 href="#home"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-900 block px-3 py-2 text-base font-medium hover:text-blue-600 transition-colors"
+                className="font-quicksand text-gray-900 block px-3 py-2 text-base font-medium hover:text-brown-600 transition-colors"
               >
                 Home
               </a>
               <a
-                href="#about"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium hover:text-blue-600 transition-colors"
-              >
-                About
-              </a>
-              <a
                 href="#services"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium hover:text-blue-600 transition-colors"
+                className="font-quicksand text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium hover:text-brown-600 transition-colors"
               >
                 Services
               </a>
               <a
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium hover:text-blue-600 transition-colors"
+                className="font-quicksand text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium hover:text-brown-600 transition-colors"
               >
                 Contact
               </a>
-              <div className="px-3 py-2">
-                <button className="font-quicksand w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-base font-medium transition-colors">
-                  Get Started
-                </button>
-              </div>
             </div>
           </div>
         )}
