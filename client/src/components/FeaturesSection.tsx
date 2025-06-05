@@ -30,7 +30,7 @@ export default function ServicesSection() {
       </div>
       
       <aside className="bg-[#5a3a22] w-[220px] mt-12 md:mt-0 flex flex-col justify-center items-center relative min-h-[400px]">
-        <div className="absolute top-6 left-4 text-[#d9c4b0] font-quicksand text-[14px] font-normal space-y-4">
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#d9c4b0] font-quicksand text-[14px] font-normal space-y-4 text-center">
           <p>Architecture</p>
           <p>Interior</p>
           <p>Landscape</p>
