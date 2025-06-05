@@ -35,7 +35,7 @@ export default function ServicesSection() {
           <p>Interior</p>
           <p>Landscape</p>
         </div>
-        <div className="absolute bottom-6 right-4 font-rigot text-[48px] font-bold leading-[48px] select-none text-[#d9c4b0] transform rotate-180" style={{writingMode: 'vertical-rl', textOrientation: 'mixed'}}>
+        <div className="absolute right-4 top-1/2 transform -translate-y-1/2 font-rigot text-[48px] font-bold leading-[48px] select-none text-[#d9c4b0] rotate-180" style={{writingMode: 'vertical-rl', textOrientation: 'mixed'}}>
           aakaara
         </div>
       </aside>
