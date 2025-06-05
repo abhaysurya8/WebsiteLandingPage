@@ -1,36 +1,21 @@
-/* Custom Rigot Bold Font Integration */
+/* Rigot Bold Font - Used only for "aakaara" branding */
 @font-face {
-  font-family: 'Rigot';
-  src: url('/fonts/rigot-bold.woff2') format('woff2'),
-       url('/fonts/rigot-bold.woff') format('woff'),
-       url('/fonts/rigot-bold.ttf') format('truetype');
-  font-weight: bold;
+  font-family: 'Rigot Bold';
+  src: url('/fonts/RigotBold.woff2') format('woff2'),
+       url('/fonts/RigotBold.woff') format('woff');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-/* Font utility classes */
-.font-rigot {
-  font-family: 'Rigot', 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: bold;
-}
-
-.font-quicksand {
-  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-/* Apply Quicksand as default body font */
+/* Default font family for all text except aakaara branding */
 body {
-  font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Enhanced text rendering */
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Aakaara branding class */
+.brand-font {
+  font-family: 'Rigot Bold', sans-serif !important;
+  font-weight: 700;
 }
