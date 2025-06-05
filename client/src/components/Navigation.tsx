@@ -36,21 +36,35 @@ export default function Navigation() {
               <a
                 href="#home"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-900 block py-2 text-base font-medium hover:text-brown-600 transition-colors"
+                className="font-quicksand text-gray-900 block py-2 text-base font-medium hover:text-[#7f6a4d] transition-colors"
               >
                 Home
               </a>
               <a
-                href="#services"
+                href="#about"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-600 hover:text-gray-900 block py-2 text-base font-medium hover:text-brown-600 transition-colors"
+                className="font-quicksand text-gray-600 hover:text-gray-900 block py-2 text-base font-medium hover:text-[#7f6a4d] transition-colors"
               >
-                Services
+                About
+              </a>
+              <a
+                href="#projects"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="font-quicksand text-gray-600 hover:text-gray-900 block py-2 text-base font-medium hover:text-[#7f6a4d] transition-colors"
+              >
+                Projects
+              </a>
+              <a
+                href="#pricing"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="font-quicksand text-gray-600 hover:text-gray-900 block py-2 text-base font-medium hover:text-[#7f6a4d] transition-colors"
+              >
+                Pricing
               </a>
               <a
                 href="#contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-600 hover:text-gray-900 block py-2 text-base font-medium hover:text-brown-600 transition-colors"
+                className="font-quicksand text-gray-600 hover:text-gray-900 block py-2 text-base font-medium hover:text-[#7f6a4d] transition-colors"
               >
                 Contact
               </a>
