@@ -1,77 +1,90 @@
 import { useState } from "react";
+import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
+import { useFont } from "@/contexts/FontContext";
+import FontSwitcher from "./FontSwitcher";
 
 export default function Navigation() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [location] = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { logoFont } = useFont();
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  const navigation = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Projects", href: "/projects" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  const isActive = (href: string) => {
+    if (href === "/") return location === "/";
+    return location.startsWith(href);
   };
 
   return (
-    <>
-      {/* Menu icon top-left fixed */}
-      <button 
-        aria-label="Menu" 
-        className="fixed top-6 left-6 z-50 flex flex-col w-5 h-4 justify-between" 
-        type="button"
-        onClick={toggleMobileMenu}
-      >
-        <span className="block h-0.5 w-5 bg-black rounded-sm"></span>
-        <span className="block h-0.5 w-5 bg-black rounded-sm"></span>
-        <span className="block h-0.5 w-5 bg-black rounded-sm"></span>
-      </button>
-      
-      {/* Mobile Navigation Menu */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setIsMobileMenuOpen(false)}>
-          <div className="fixed top-0 left-0 h-full w-64 bg-white p-6 z-50" onClick={(e) => e.stopPropagation()}>
-            <button 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="absolute top-6 right-6"
-            >
-              <X className="h-6 w-6" />
-            </button>
-            <div className="mt-16 space-y-4">
-              <a
-                href="#home"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-900 block py-2 text-base font-medium hover:text-[#7f6a4d] transition-colors"
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-aakaara-brown/20">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-3">
+            <span className={`${logoFont === 'rigot' ? 'font-rigot' : 'font-playfair'} text-2xl font-normal text-aakaara-text hover:text-aakaara-brown transition-colors`}>
+              aakaara
+            </span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`text-sm font-medium transition-colors ${
+                  isActive(item.href)
+                    ? "text-aakaara-brown border-b-2 border-aakaara-brown pb-1"
+                    : "text-aakaara-text hover:text-aakaara-brown"
+                }`}
               >
-                Home
-              </a>
-              <a
-                href="#about"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-600 hover:text-gray-900 block py-2 text-base font-medium hover:text-[#7f6a4d] transition-colors"
-              >
-                About
-              </a>
-              <a
-                href="#projects"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-600 hover:text-gray-900 block py-2 text-base font-medium hover:text-[#7f6a4d] transition-colors"
-              >
-                Projects
-              </a>
-              <a
-                href="#pricing"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-600 hover:text-gray-900 block py-2 text-base font-medium hover:text-[#7f6a4d] transition-colors"
-              >
-                Pricing
-              </a>
-              <a
-                href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="font-quicksand text-gray-600 hover:text-gray-900 block py-2 text-base font-medium hover:text-[#7f6a4d] transition-colors"
-              >
-                Contact
-              </a>
+                {item.name}
+              </Link>
+            ))}
+            <FontSwitcher />
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 text-aakaara-text hover:text-aakaara-brown transition-colors"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-aakaara-brown/20">
+            <div className="flex flex-col space-y-4">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`text-base font-medium transition-colors ${
+                    isActive(item.href)
+                      ? "text-aakaara-brown"
+                      : "text-aakaara-text hover:text-aakaara-brown"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="pt-2">
+                <FontSwitcher />
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </>
+        )}
+      </div>
+    </nav>
   );
 }

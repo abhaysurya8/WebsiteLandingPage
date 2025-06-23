@@ -1,0 +1,45 @@
+Changes that are made:
+
+
+In package.json:
+
+Change to this:
+
+"scripts": {
+  "dev": "cross-env NODE_ENV=development tsx server/index.ts"     -----only change this Line.
+}
+
+
+
+
+
+
+
+In index.ts
+
+|From
+
+In your server/index.ts, find this:
+
+server.listen({
+  port,
+  host: "0.0.0.0",
+  reusePort: true,
+}, () => {
+  log(`serving on port ${port}`);
+});
+
+change to this:
+
+server.listen({
+  port: 5000,
+  host: "127.0.0.1"
+}, () => {
+  console.log("Server running at http://127.0.0.1:5000");
+});
+
+
+
+To Run :
+
+from server folder In url Type cmd and then type npm run dev.....
