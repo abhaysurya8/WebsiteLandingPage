@@ -29,8 +29,8 @@ const ProjectDetail = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Back Button */}
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 pt-8">
+      {/* Back Button - Added more top padding to distance from hamburger menu */}
+      <div className="max-w-[1200px] mx-auto px-6 md:px-12 pt-20">
         <Link 
           href="/projects" 
           className="inline-flex items-center text-aakaara-brown hover:text-aakaara-dark-brown transition-colors mb-8"
