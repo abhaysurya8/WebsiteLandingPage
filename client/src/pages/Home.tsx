@@ -44,9 +44,9 @@ const Home = () => {
                 <p>Landscape</p>
               </div>
               
-              {/* Aakaara text - ONLY Rigot Bold, bigger size */}
-              <div className="relative">
-                <div className="font-rigot font-bold text-[60px] vertical-text leading-[60px] select-none text-aakaara-light-brown">
+              {/* Aakaara text - ONLY Rigot Bold, much bigger size with proper spacing */}
+              <div className="relative pr-8">
+                <div className="font-rigot font-bold text-[80px] vertical-text leading-[80px] select-none text-aakaara-light-brown">
                   aakaara
                 </div>
               </div>
