@@ -37,15 +37,15 @@ const Home = () => {
         <aside className="bg-aakaara-dark-brown w-[220px] min-h-screen flex flex-col relative animate-slide-in-right">
           {/* Services and Aakaara - Centered in the brown strip */}
           <div className="flex-1 flex items-center justify-center">
-            <div className="flex items-center space-x-8">
-              <div className="text-aakaara-light-brown text-[14px] space-y-6">
+            <div className="flex items-center space-x-6">
+              <div className="text-aakaara-light-brown text-[18px] space-y-6">
                 <p>Architecture</p>
                 <p>Interior</p>
                 <p>Landscape</p>
               </div>
               
-              {/* Aakaara text - ONLY Rigot Bold, much bigger size with proper spacing */}
-              <div className="relative pr-8">
+              {/* Aakaara text - ONLY Rigot Bold, centered together */}
+              <div className="relative">
                 <div className="font-rigot font-bold text-[80px] vertical-text leading-[80px] select-none text-aakaara-light-brown">
                   aakaara
                 </div>
