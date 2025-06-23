@@ -31,15 +31,15 @@ const Pricing = () => {
             {/* Header Row */}
             <div className="grid grid-cols-3">
               <div className="bg-aakaara-brown text-white p-6 text-center">
-                <h3 className="text-lg font-medium">Deliverables</h3>
+                <h3 className="text-lg font-medium text-aakaara-brown bg-white px-4 py-2 rounded">Deliverables</h3>
               </div>
               <div className="bg-aakaara-brown text-white p-6 text-center border-l border-aakaara-dark-brown">
-                <h3 className="text-lg font-medium">Elegance</h3>
-                <p className="text-sm mt-1 text-aakaara-light-brown">(₹1,779)</p>
+                <h3 className="text-lg font-medium text-aakaara-brown bg-white px-4 py-2 rounded">Elegance</h3>
+                <p className="text-sm mt-3 text-aakaara-brown bg-white px-3 py-1 rounded font-semibold">(₹1,779)</p>
               </div>
               <div className="bg-aakaara-brown text-white p-6 text-center border-l border-aakaara-dark-brown">
-                <h3 className="text-lg font-medium">Elite</h3>
-                <p className="text-sm mt-1 text-aakaara-light-brown">(₹2,249)</p>
+                <h3 className="text-lg font-medium text-aakaara-brown bg-white px-4 py-2 rounded">Elite</h3>
+                <p className="text-sm mt-3 text-aakaara-brown bg-white px-3 py-1 rounded font-semibold">(₹2,249)</p>
               </div>
             </div>
 

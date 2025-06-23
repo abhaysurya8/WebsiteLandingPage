@@ -236,7 +236,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="w-full bg-aakaara-brown text-white py-3 px-6 rounded-lg font-medium hover:bg-aakaara-dark-brown transition-colors flex items-center justify-center"
+                className="w-full bg-aakaara-brown text-aakaara-brown py-3 px-6 rounded-lg font-medium hover:bg-aakaara-dark-brown hover:text-white transition-colors flex items-center justify-center bg-white border-2 border-aakaara-brown"
               >
                 <Send size={18} className="mr-2" />
                 Send Message
