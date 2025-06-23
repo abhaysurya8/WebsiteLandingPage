@@ -5,7 +5,7 @@ const Pricing = () => {
     { name: "2D Floor Plans", elegant: true, elite: true },
     { name: "3D Elevation Designing", elegant: true, elite: true },
     { name: "Architectural & Structural Drawings", elegant: true, elite: true },
-    { name: "Ghar 360 (AR/VR) Planning & Interior", elegant: false, elite: true },
+    { name: "MANE 360 (AR/VR) Planning & Interior", elegant: false, elite: true },
     { name: "Door, Windows, Railings Planning", elegant: true, elite: true },
     { name: "Premium Soil & Supervision", elegant: false, elite: true },
     { name: "Compliance & Design Coordination", elegant: false, elite: true },

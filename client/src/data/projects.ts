@@ -52,7 +52,7 @@ export const projectList: Project[] = [
     slug: "prajwal-residence",
     title: "Mr. Prajwal's Residence",
     category: "Architecture",
-    image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     description: "Luxury residential project blending sophisticated design with unparalleled comfort and contemporary architecture."
   },
   {
@@ -60,7 +60,7 @@ export const projectList: Project[] = [
     slug: "shivakumar-residence",
     title: "Mr. Shivakumar's Residence",
     category: "Architecture",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     description: "Luxury residential project showcasing harmonious balance of contemporary architecture and timeless elegance."
   },
   {
@@ -68,7 +68,7 @@ export const projectList: Project[] = [
     slug: "kumar-residence",
     title: "Mr. Kumar's Residence",
     category: "Architecture",
-    image: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     description: "Modern elegance combined with functional design, creating serene living space integrated with natural surroundings."
   },
   {
@@ -94,7 +94,7 @@ export const projectList: Project[] = [
     slug: "mvj-college-office",
     title: "MVJ College Office",
     category: "Landscape",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     description: "Seamless integration of built structures with rural landscape using natural materials and native vegetation."
   },
   {
@@ -102,7 +102,7 @@ export const projectList: Project[] = [
     slug: "high-rise-apartment",
     title: "High Rise Apartment",
     category: "Landscape",
-    image: "https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     description: "Efficient vertical space utilization with focus on sustainability, accessibility, and modern amenities integration."
   },
   {
@@ -110,7 +110,7 @@ export const projectList: Project[] = [
     slug: "girish-backyard",
     title: "Girish's Backyard",
     category: "Landscape",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c5d5c2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "https://images.unsplash.com/photo-1574691250077-03a929faece5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     description: "Farmhouse landscape design enhancing functionality and aesthetic appeal with natural materials and native plants."
   },
   {
@@ -118,7 +118,7 @@ export const projectList: Project[] = [
     slug: "anil-farmhouse",
     title: "Anil's Farmhouse",
     category: "Landscape",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "https://images.unsplash.com/photo-1585128792020-803d29415281?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     description: "Harmonious blend between built environment and rural landscape maintaining rustic charm and sustainable living."
   }
   

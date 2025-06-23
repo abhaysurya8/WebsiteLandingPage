@@ -24,7 +24,7 @@ export default function Navigation() {
       {/* Hamburger Menu Button - Fixed Position with more left spacing */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="fixed top-6 left-4 z-50 p-3 text-aakaara-text hover:text-aakaara-brown transition-colors"
+        className="fixed top-6 left-2 z-50 p-3 text-aakaara-text hover:text-aakaara-brown transition-colors"
         aria-label="Toggle menu"
       >
         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
