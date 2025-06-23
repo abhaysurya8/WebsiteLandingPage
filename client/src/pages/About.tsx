@@ -5,15 +5,25 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
           {/* Profile Image - TO CHANGE YOUR PICTURE: Replace the src URL below with your image */}
           <div className="flex justify-center lg:justify-start animate-slide-in-left">
-            <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
-              alt="Ar. Shivangi Shivakumar"
-              className="w-80 h-80 rounded-full object-cover shadow-lg hover-scale"
-            />
-            {/* TO CHANGE YOUR PICTURE: 
-                1. Upload your image to a hosting service (like Imgur, Cloudinary, or use the assets folder)
-                2. Replace the src URL above with your image URL
-                3. Make sure the image is square (400x400px) for best results
+            <div className="relative group">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400"
+                alt="Ar. Shivangi Shivakumar"
+                className="w-80 h-80 rounded-full object-cover shadow-lg hover-scale"
+              />
+              {/* Change Picture Button - Click to get instructions */}
+              <div className="absolute inset-0 bg-black bg-opacity-50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="text-white text-center p-4">
+                  <p className="text-sm font-medium mb-2">Change Picture</p>
+                  <p className="text-xs">Upload your image to Imgur/Cloudinary and replace the src URL in About.tsx (line 9)</p>
+                </div>
+              </div>
+            </div>
+            {/* INSTRUCTIONS TO CHANGE YOUR PICTURE: 
+                1. Upload your image to a hosting service (Imgur: https://imgur.com or Cloudinary: https://cloudinary.com)
+                2. Right-click your uploaded image and copy the image URL
+                3. Replace the src URL above (line 9) with your image URL
+                4. Make sure the image is square (400x400px) for best results
             */}
           </div>
 

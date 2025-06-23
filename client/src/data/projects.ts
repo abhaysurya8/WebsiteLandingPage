@@ -27,224 +27,194 @@ export interface ProjectDetail {
   features: string[];
 }
 
-// MAIN PROJECTS LIST - Add new projects here
-// ==========================================
+// MAIN PROJECTS LIST - Your actual projects from word documents
+// ==============================================================
 export const projectList: Project[] = [
+  // Architecture & Interior Projects
   {
     id: 1,
-    slug: "modern-residential-villa",
-    title: "Modern Residential Villa",
+    slug: "ujjwal-residence",
+    title: "Mr. Ujjwal's Residence",
     category: "Architecture",
     image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "A contemporary villa design that seamlessly blends indoor and outdoor living spaces."
+    description: "Featuring warm, natural materials and bold, dynamic accents with modular furniture and biophilic design elements."
   },
   {
     id: 2,
-    slug: "urban-apartment-interior",
-    title: "Urban Apartment Interior",
-    category: "Interior Design",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Sophisticated interior design for a modern urban apartment with maximized space efficiency."
+    slug: "sirigere-mane",
+    title: "Sirigere Mane",
+    category: "Architecture",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    description: "Modern urban apartment in Bangalore's heart, redefining contemporary living with elegance and sustainability."
   },
   {
     id: 3,
-    slug: "sustainable-office-complex",
-    title: "Sustainable Office Complex",
+    slug: "prajwal-residence",
+    title: "Mr. Prajwal's Residence",
     category: "Architecture",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "An eco-friendly office complex design incorporating green building principles."
+    image: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    description: "Luxury residential project blending sophisticated design with unparalleled comfort and contemporary architecture."
   },
   {
     id: 4,
-    slug: "rooftop-garden-design",
-    title: "Rooftop Garden Design",
-    category: "Landscape",
-    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "A beautifully designed rooftop garden that creates an urban oasis."
+    slug: "shivakumar-residence",
+    title: "Mr. Shivakumar's Residence",
+    category: "Architecture",
+    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    description: "Luxury residential project showcasing harmonious balance of contemporary architecture and timeless elegance."
   },
   {
     id: 5,
-    slug: "luxury-hotel-lobby",
-    title: "Luxury Hotel Lobby",
-    category: "Interior Design",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "An elegant hotel lobby design that creates a memorable first impression."
+    slug: "kumar-residence",
+    title: "Mr. Kumar's Residence",
+    category: "Architecture",
+    image: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    description: "Modern elegance combined with functional design, creating serene living space integrated with natural surroundings."
   },
   {
     id: 6,
-    slug: "contemporary-house",
-    title: "Contemporary House",
-    category: "Architecture",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "A sleek contemporary house design with clean lines and modern aesthetics."
+    slug: "coworking-space",
+    title: "Co-Working Space",
+    category: "Interior Design",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    description: "Bangalore coworking space fostering creativity and collaboration with modular furniture and biophilic design."
   },
+  
+  // Landscape Projects
   {
     id: 7,
-    slug: "boutique-restaurant",
-    title: "Boutique Restaurant",
-    category: "Interior Design",
-    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Intimate restaurant design with warm lighting and curated furnishings."
+    slug: "terrace-garden",
+    title: "Terrace Garden",
+    category: "Landscape",
+    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    description: "Landscaped planting areas with ornamental plants, seating zones, and infinity pool creating serene urban escape."
   },
   {
     id: 8,
-    slug: "minimalist-studio",
-    title: "Minimalist Studio",
-    category: "Architecture",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "A clean, minimalist studio space designed for creative professionals."
+    slug: "mvj-college-office",
+    title: "MVJ College Office",
+    category: "Landscape",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    description: "Seamless integration of built structures with rural landscape using natural materials and native vegetation."
   },
   {
     id: 9,
-    slug: "heritage-restoration",
-    title: "Heritage Restoration",
-    category: "Architecture",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Careful restoration of a historic building preserving its cultural significance."
+    slug: "high-rise-apartment",
+    title: "High Rise Apartment",
+    category: "Landscape",
+    image: "https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    description: "Efficient vertical space utilization with focus on sustainability, accessibility, and modern amenities integration."
   },
   {
     id: 10,
-    slug: "zen-garden-retreat",
-    title: "Zen Garden Retreat",
+    slug: "girish-backyard",
+    title: "Girish's Backyard",
     category: "Landscape",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Tranquil landscape design inspired by Japanese zen principles."
+    image: "https://images.unsplash.com/photo-1558618047-3c8c5d5c2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    description: "Farmhouse landscape design enhancing functionality and aesthetic appeal with natural materials and native plants."
   },
   {
     id: 11,
-    slug: "smart-home-automation",
-    title: "Smart Home Automation",
-    category: "Interior Design",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c5d5c2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Integration of smart technology with elegant interior design."
-  },
-  {
-    id: 12,
-    slug: "eco-friendly-farmhouse",
-    title: "Eco-Friendly Farmhouse",
-    category: "Architecture",
-    image: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Sustainable farmhouse design using local materials and passive cooling."
-  },
-  {
-    id: 13,
-    slug: "corporate-headquarters",
-    title: "Corporate Headquarters",
-    category: "Architecture",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Modern corporate building with emphasis on employee wellness and productivity."
-  },
-  {
-    id: 14,
-    slug: "luxury-penthouse",
-    title: "Luxury Penthouse",
-    category: "Interior Design",
-    image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Opulent penthouse interior with panoramic city views and premium finishes."
-  },
-  {
-    id: 15,
-    slug: "community-park",
-    title: "Community Park",
+    slug: "anil-farmhouse",
+    title: "Anil's Farmhouse",
     category: "Landscape",
-    image: "https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Public park design fostering community interaction and recreation."
-  },
-  {
-    id: 16,
-    slug: "boutique-hotel",
-    title: "Boutique Hotel",
-    category: "Architecture",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Intimate hotel design with local cultural influences and modern amenities."
-  },
-  {
-    id: 17,
-    slug: "art-gallery-space",
-    title: "Art Gallery Space",
-    category: "Interior Design",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Gallery interior optimized for art display with controlled lighting and flow."
-  },
-  {
-    id: 18,
-    slug: "residential-complex",
-    title: "Residential Complex",
-    category: "Architecture",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Multi-family residential complex with shared amenities and green spaces."
-  },
-  {
-    id: 19,
-    slug: "meditation-pavilion",
-    title: "Meditation Pavilion",
-    category: "Architecture",
     image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Serene pavilion design for meditation and spiritual practices."
-  },
-  {
-    id: 20,
-    slug: "urban-courtyard",
-    title: "Urban Courtyard",
-    category: "Landscape",
-    image: "https://images.unsplash.com/photo-1558618047-3c8c5d5c2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Private urban courtyard with water features and native plantings."
+    description: "Harmonious blend between built environment and rural landscape maintaining rustic charm and sustainable living."
   }
+  
+  // TO ADD MORE PROJECTS: Follow the same structure above
+  // {
+  //   id: 12,
+  //   slug: "your-project-slug",
+  //   title: "Your Project Title",
+  //   category: "Architecture" | "Interior Design" | "Landscape",
+  //   image: "your-image-url",
+  //   description: "Your project description"
+  // }
 ];
 
-// DETAILED PROJECT INFORMATION - Add detailed data here
-// =====================================================
+// DETAILED PROJECT INFORMATION - Your actual project details
+// ==========================================================
 export const projectDetails: { [key: string]: ProjectDetail } = {
-  "modern-residential-villa": {
-    slug: "modern-residential-villa",
-    title: "Modern Residential Villa",
+  "ujjwal-residence": {
+    slug: "ujjwal-residence",
+    title: "Mr. Ujjwal's Residence",
     category: "Architecture",
     location: "Bangalore, Karnataka",
-    year: "2023",
+    year: "2024",
     client: "Private Residence",
-    area: "3,500 sq ft",
+    area: "3,200 sq ft",
     images: [
       "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
     ],
-    description: "A contemporary villa design that seamlessly blends indoor and outdoor living spaces, featuring clean lines, natural materials, and sustainable design principles.",
-    challenge: "The primary challenge was to create a modern family home that maintains privacy while maximizing natural light and creating seamless indoor-outdoor flow.",
-    solution: "We designed a series of interconnected pavilions around a central courtyard, using large sliding glass doors, natural stone, and wooden elements to create harmony with the landscape.",
+    description: "The interiors feature a mix of warm, natural materials and bold, dynamic accents. Modular furniture, biophilic design elements, and varied work zones create an inspiring and adaptable environment.",
+    challenge: "Creating an inspiring and adaptable living environment that accommodates both individual and family needs.",
+    solution: "We implemented modular furniture solutions and biophilic design elements with varied zones for different activities.",
     features: [
-      "Open-plan living spaces with double-height ceilings",
-      "Central courtyard with water feature",
-      "Sustainable materials and energy-efficient systems",
-      "Private garden with outdoor entertainment area",
-      "Smart home automation system"
+      "Gourmet kitchen with state-of-the-art appliances",
+      "Tranquil master suite with private balcony",
+      "Landscaped backyard with pool and fire pit",
+      "Solar panels and rainwater harvesting",
+      "Modular furniture and biophilic design"
     ]
   },
-  "urban-apartment-interior": {
-    slug: "urban-apartment-interior",
-    title: "Urban Apartment Interior",
-    category: "Interior Design",
-    location: "Mumbai, Maharashtra",
-    year: "2023",
-    client: "Young Professional",
-    area: "1,200 sq ft",
+  "sirigere-mane": {
+    slug: "sirigere-mane",
+    title: "Sirigere Mane",
+    category: "Architecture",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Urban Professionals",
+    area: "1,800 sq ft",
     images: [
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
       "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1556020685-ae41abfc9365?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
     ],
-    description: "Sophisticated interior design for a modern urban apartment with maximized space efficiency and contemporary aesthetics.",
-    challenge: "Transform a compact apartment into a functional and stylish home that accommodates work, rest, and entertainment needs.",
-    solution: "We employed smart storage solutions, multi-functional furniture, and a neutral color palette with accent colors to create the illusion of space while maintaining style.",
+    description: "Located in the bustling heart of Bangalore, this residential apartment project redefines modern urban living with a focus on elegance, functionality, and sustainability.",
+    challenge: "Designing modern urban apartments that cater to professionals and families while maintaining elegance and sustainability.",
+    solution: "Contemporary design with sleek façade of glass and concrete, complemented by green terraces, prioritizing natural light and ventilation.",
     features: [
-      "Custom-built storage solutions",
-      "Multi-functional furniture pieces",
-      "Modern kitchen with breakfast bar",
-      "Home office integration",
-      "Artistic lighting design"
+      "Contemporary glass and concrete façade",
+      "Green terraces for sustainability",
+      "Strategic natural light and ventilation",
+      "Modern amenities for urban living",
+      "Harmonious blend of style and practicality"
+    ]
+  },
+  "coworking-space": {
+    slug: "coworking-space",
+    title: "Co-Working Space",
+    category: "Interior Design",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Commercial",
+    area: "5,000 sq ft",
+    images: [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+    ],
+    description: "Located in the heart of Bangalore, this coworking space is designed to foster creativity, collaboration, and productivity for professionals and businesses alike.",
+    challenge: "Creating a flexible workspace that adapts to the dynamic needs of today's workforce while promoting creativity and collaboration.",
+    solution: "Mixed warm, natural materials with bold, dynamic accents, modular furniture, and biophilic design elements creating varied work zones.",
+    features: [
+      "Modular furniture for flexibility",
+      "Biophilic design elements",
+      "Varied work zones for different needs",
+      "Mix of warm, natural materials",
+      "Bold, dynamic accent features"
     ]
   }
+  
   // TO ADD MORE DETAILED PROJECT INFO:
   // Copy the structure above and add new entries with the same slug as in projectList
+  // Example for remaining projects:
+  // "prajwal-residence": { ... },
+  // "terrace-garden": { ... },
+  // etc.
 };
 
 // HELPER FUNCTIONS

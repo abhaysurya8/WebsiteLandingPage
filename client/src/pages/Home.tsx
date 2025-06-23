@@ -46,14 +46,14 @@ const Home = () => {
               
               {/* Aakaara text - Centered with Font Switcher */}
               <div className="relative">
-                <div className={`${logoFont === 'rigot' ? 'font-rigot' : 'font-playfair'} text-[48px] font-normal vertical-text leading-[48px] select-none text-aakaara-light-brown`}>
+                <div className={`${logoFont === 'rigot' ? 'font-rigot font-bold' : 'font-playfair'} text-[48px] font-normal vertical-text leading-[48px] select-none text-aakaara-light-brown`}>
                   aakaara
                 </div>
-                {/* Font Switcher Button - TO CHANGE FONT: Click this button */}
+                {/* Font Switcher Button - TO CHANGE FONT: Click this button to switch to Rigot Bold */}
                 <button
                   onClick={() => setLogoFont(logoFont === 'playfair' ? 'rigot' : 'playfair')}
                   className="absolute -right-8 top-1/2 transform -translate-y-1/2 rotate-90 text-xs text-aakaara-light-brown/70 hover:text-aakaara-light-brown transition-colors border border-aakaara-light-brown/30 px-2 py-1 rounded"
-                  title="Switch Font"
+                  title={logoFont === 'playfair' ? 'Switch to Rigot Bold' : 'Switch to Playfair Display'}
                 >
                   {logoFont === 'playfair' ? 'R' : 'P'}
                 </button>
