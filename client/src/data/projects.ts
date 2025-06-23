@@ -207,14 +207,127 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
       "Mix of warm, natural materials",
       "Bold, dynamic accent features"
     ]
+  },
+  "terrace-garden": {
+    slug: "terrace-garden",
+    title: "Terrace Garden",
+    category: "Landscape",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Residential",
+    area: "2,500 sq ft",
+    images: [
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+    ],
+    description: "The design typically includes landscaped planting areas with ornamental or edible plants, seating zones, and an infinity pool that creates a visual effect of water extending to the horizon.",
+    challenge: "Maximizing space while enhancing urban living and providing a serene escape in a limited terrace area.",
+    solution: "Strategic placement of landscaped areas, seating zones, and infinity pool considering structural load, waterproofing, and drainage.",
+    features: [
+      "Landscaped planting areas with ornamental plants",
+      "Comfortable seating zones",
+      "Infinity pool with horizon effect",
+      "Structural load consideration",
+      "Sustainable drainage practices"
+    ]
+  },
+  "mvj-college-office": {
+    slug: "mvj-college-office",
+    title: "MVJ College Office",
+    category: "Landscape",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Educational Institution",
+    area: "8,000 sq ft",
+    images: [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+    ],
+    description: "The design aims to seamlessly integrate the built structures with the rural landscape by using natural materials, native vegetation, and open, flowing layouts that preserve rustic charm and promote sustainable living.",
+    challenge: "Integrating modern office requirements while maintaining harmony with the rural landscape setting.",
+    solution: "Used natural materials and native vegetation with open, flowing layouts to preserve the rustic charm.",
+    features: [
+      "Natural materials integration",
+      "Native vegetation selection",
+      "Open, flowing layout design",
+      "Rustic charm preservation",
+      "Sustainable living promotion"
+    ]
+  },
+  "high-rise-apartment": {
+    slug: "high-rise-apartment",
+    title: "High Rise Apartment",
+    category: "Landscape",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Residential Complex",
+    area: "15,000 sq ft",
+    images: [
+      "https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1558618047-3c8c5d5c2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+    ],
+    description: "The project focuses on efficient vertical space utilization, structural integrity, accessibility, and integration of modern amenities such as elevators, parking, security, and communal areas.",
+    challenge: "Efficiently utilizing vertical space while ensuring structural integrity and accessibility for high-rise living.",
+    solution: "Strategic planning for modern amenities integration with focus on sustainability, fire safety, and local building code compliance.",
+    features: [
+      "Efficient vertical space utilization",
+      "Modern amenities integration",
+      "Elevator and parking systems",
+      "Security and communal areas",
+      "Fire safety compliance"
+    ]
+  },
+  "girish-backyard": {
+    slug: "girish-backyard",
+    title: "Girish's Backyard",
+    category: "Landscape",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Private Farmhouse",
+    area: "4,200 sq ft",
+    images: [
+      "https://images.unsplash.com/photo-1558618047-3c8c5d5c2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+    ],
+    description: "The landscape farmhouse project involves designing the outdoor spaces around a farmhouse to enhance its functionality, aesthetic appeal, and connection to nature. The design emphasizes a harmonious blend between the built environment and the rural landscape, often using natural materials, native plants, and open layouts to maintain the rustic charm and support sustainable living.",
+    challenge: "Enhancing farmhouse outdoor functionality while maintaining connection to nature and rustic appeal.",
+    solution: "Harmonious blend of built environment with rural landscape using natural materials, native plants, and open layouts.",
+    features: [
+      "Enhanced functionality and aesthetic appeal",
+      "Natural materials and native plants",
+      "Open layout design",
+      "Rustic charm maintenance",
+      "Sustainable living support"
+    ]
+  },
+  "anil-farmhouse": {
+    slug: "anil-farmhouse",
+    title: "Anil's Farmhouse",
+    category: "Landscape",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Private Farmhouse",
+    area: "3,800 sq ft",
+    images: [
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1558618047-3c8c5d5c2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
+      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+    ],
+    description: "The landscape farmhouse project involves designing the outdoor spaces around a farmhouse to enhance its functionality, aesthetic appeal, and connection to nature. The design emphasizes a harmonious blend between the built environment and the rural landscape, often using natural materials, native plants, and open layouts to maintain the rustic charm and support sustainable living.",
+    challenge: "Creating functional outdoor spaces that enhance aesthetic appeal while maintaining natural harmony.",
+    solution: "Harmonious blend of built environment with rural landscape using natural materials, native plants, and open layouts.",
+    features: [
+      "Enhanced functionality and aesthetic appeal",
+      "Natural materials and native plants",
+      "Open layout design",
+      "Rustic charm maintenance",
+      "Sustainable living support"
+    ]
   }
-  
-  // TO ADD MORE DETAILED PROJECT INFO:
-  // Copy the structure above and add new entries with the same slug as in projectList
-  // Example for remaining projects:
-  // "prajwal-residence": { ... },
-  // "terrace-garden": { ... },
-  // etc.
 };
 
 // HELPER FUNCTIONS
