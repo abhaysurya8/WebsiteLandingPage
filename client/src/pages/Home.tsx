@@ -4,10 +4,10 @@ const Home = () => {
   const { logoFont, setLogoFont } = useFont();
   
   return (
-    <div className="min-h-screen bg-white">
-      <div className="flex">
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      <div className="flex w-full">
         {/* Main Content */}
-        <div className="flex-1 px-6 md:px-12 py-12 md:py-20 animate-fade-in">
+        <div className="flex-1 px-6 md:px-12 py-12 md:py-20 animate-fade-in min-w-0">
           <h1 className="text-aakaara-text text-[24px] md:text-[28px] leading-[32px] md:leading-[38px] font-normal mb-4 animate-slide-up">
             Redefining Spaces with Expertise in Architecture, Interiors, and Landscape Design.
           </h1>
@@ -33,26 +33,21 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right Sidebar - Brown strip extending full height */}
-        <aside className="bg-aakaara-dark-brown w-[220px] min-h-screen flex flex-col relative animate-slide-in-right">
-          {/* Services and Aakaara - Centered in the brown strip */}
-          <div className="flex-1 flex items-center justify-center">
-            <div className="flex items-center space-x-3">
-              <div className="text-aakaara-light-brown text-[14px] space-y-4">
-                <p>Architecture</p>
-                <p>Interior</p>
-                <p>Landscape</p>
-              </div>
-              
-              {/* Aakaara text - ONLY Rigot Bold, centered together */}
-              <div className="flex items-center">
-                <div className="font-rigot font-bold text-[80px] vertical-text leading-[80px] select-none text-aakaara-light-brown">
-                  aakaara
-                </div>
-              </div>
+        {/* Right Sidebar - Brown strip extending full height, no overflow */}
+        <div className="bg-aakaara-dark-brown w-[200px] md:w-[220px] min-h-screen flex-shrink-0 flex items-center justify-center animate-slide-in-right">
+          <div className="flex items-center space-x-3">
+            <div className="text-aakaara-light-brown text-[14px] space-y-4">
+              <p>Architecture</p>
+              <p>Interior</p>
+              <p>Landscape</p>
+            </div>
+            
+            {/* Aakaara text - ONLY Rigot Bold, centered together */}
+            <div className="font-rigot font-bold text-[80px] vertical-text leading-[80px] select-none text-aakaara-light-brown">
+              aakaara
             </div>
           </div>
-        </aside>
+        </div>
       </div>
 
       {/* Footer - Regular footer outside the brown strip */}

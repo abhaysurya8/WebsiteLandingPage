@@ -42,7 +42,7 @@ const Projects = () => {
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
                     ? "bg-aakaara-brown text-white shadow-lg transform scale-105"
-                    : "bg-white text-aakaara-text border border-aakaara-brown/20 hover:border-aakaara-brown hover:text-aakaara-brown"
+                    : "bg-white text-aakaara-brown border border-aakaara-brown/20 hover:border-aakaara-brown hover:text-aakaara-brown"
                 }`}
               >
                 {category}
