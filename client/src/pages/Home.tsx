@@ -1,10 +1,10 @@
 import { useFont } from "@/contexts/FontContext";
 
 const Home = () => {
-  const { logoFont } = useFont();
+  const { logoFont, setLogoFont } = useFont();
   
   return (
-    <div className="min-h-screen bg-white pt-16">
+    <div className="min-h-screen bg-white">
       <div className="flex">
         {/* Main Content */}
         <div className="flex-1 px-6 md:px-12 py-12 md:py-20 animate-fade-in">
@@ -44,9 +44,19 @@ const Home = () => {
                 <p>Landscape</p>
               </div>
               
-              {/* Aakaara text - Centered */}
-              <div className={`${logoFont === 'rigot' ? 'font-rigot' : 'font-playfair'} text-[48px] font-normal vertical-text leading-[48px] select-none text-aakaara-light-brown`}>
-                aakaara
+              {/* Aakaara text - Centered with Font Switcher */}
+              <div className="relative">
+                <div className={`${logoFont === 'rigot' ? 'font-rigot' : 'font-playfair'} text-[48px] font-normal vertical-text leading-[48px] select-none text-aakaara-light-brown`}>
+                  aakaara
+                </div>
+                {/* Font Switcher Button - TO CHANGE FONT: Click this button */}
+                <button
+                  onClick={() => setLogoFont(logoFont === 'playfair' ? 'rigot' : 'playfair')}
+                  className="absolute -right-8 top-1/2 transform -translate-y-1/2 rotate-90 text-xs text-aakaara-light-brown/70 hover:text-aakaara-light-brown transition-colors border border-aakaara-light-brown/30 px-2 py-1 rounded"
+                  title="Switch Font"
+                >
+                  {logoFont === 'playfair' ? 'R' : 'P'}
+                </button>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ const ProjectDetail = () => {
   const [, params] = useRoute("/projects/:slug");
   const slug = params?.slug;
 
-  // Mock project data - in a real app, this would come from an API
+  // TO ADD MORE PROJECT DETAILS: Add new project data here following the same structure
   const projectData: Record<string, any> = {
     "modern-residential-villa": {
       title: "Modern Residential Villa",
@@ -53,13 +53,27 @@ const ProjectDetail = () => {
         "Artistic lighting design"
       ]
     }
+    // TO ADD MORE PROJECT DETAILS: Follow this structure
+    // "your-project-slug": {
+    //   title: "Project Title",
+    //   category: "Category",
+    //   location: "Location",
+    //   year: "Year",
+    //   client: "Client Type",
+    //   area: "Area",
+    //   images: ["image1.jpg", "image2.jpg", "image3.jpg"],
+    //   description: "Project description",
+    //   challenge: "Project challenge",
+    //   solution: "Project solution",
+    //   features: ["Feature 1", "Feature 2", "Feature 3"]
+    // }
   };
 
   const project = slug ? projectData[slug] : null;
 
   if (!project) {
     return (
-      <div className="min-h-screen bg-white pt-16 flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl text-aakaara-text mb-4">Project Not Found</h1>
           <Link href="/projects" className="text-aakaara-brown hover:text-aakaara-dark-brown">
@@ -71,7 +85,7 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white pt-16">
+    <div className="min-h-screen bg-white">
       {/* Back Button */}
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 pt-8">
         <Link 

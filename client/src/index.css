@@ -2,8 +2,7 @@
 
 @font-face {
   font-family: 'Rigot Bold';
-  src: url('./fonts/rigot-bold.woff2') format('woff2'),
-       url('./fonts/rigot-bold.woff') format('woff');
+  src: url('./fonts/rigot-bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }

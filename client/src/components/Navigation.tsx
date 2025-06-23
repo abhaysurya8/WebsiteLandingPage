@@ -1,13 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
-import { useFont } from "@/contexts/FontContext";
-import FontSwitcher from "./FontSwitcher";
 
 export default function Navigation() {
   const [location] = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { logoFont } = useFont();
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -23,68 +20,47 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-aakaara-brown/20">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <span className={`${logoFont === 'rigot' ? 'font-rigot' : 'font-playfair'} text-2xl font-normal text-aakaara-text hover:text-aakaara-brown transition-colors`}>
-              aakaara
-            </span>
-          </Link>
+    <>
+      {/* Hamburger Menu Button - Fixed Position */}
+      <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="fixed top-6 left-6 z-50 p-2 text-aakaara-text hover:text-aakaara-brown transition-colors"
+        aria-label="Toggle menu"
+      >
+        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+      {/* Slide-out Menu */}
+      <div className={`fixed top-0 left-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${
+        isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+      }`}>
+        <div className="pt-20 px-8">
+          <nav className="space-y-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors ${
+                onClick={() => setIsMenuOpen(false)}
+                className={`block text-lg font-medium transition-colors py-2 ${
                   isActive(item.href)
-                    ? "text-aakaara-brown border-b-2 border-aakaara-brown pb-1"
-                    : "text-aakaara-text hover:text-aakaara-brown"
+                    ? "text-aakaara-brown border-l-4 border-aakaara-brown pl-4"
+                    : "text-aakaara-text hover:text-aakaara-brown hover:pl-2"
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <FontSwitcher />
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-aakaara-text hover:text-aakaara-brown transition-colors"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          </nav>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-aakaara-brown/20">
-            <div className="flex flex-col space-y-4">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`text-base font-medium transition-colors ${
-                    isActive(item.href)
-                      ? "text-aakaara-brown"
-                      : "text-aakaara-text hover:text-aakaara-brown"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <div className="pt-2">
-                <FontSwitcher />
-              </div>
-            </div>
-          </div>
-        )}
       </div>
-    </nav>
+
+      {/* Overlay */}
+      {isMenuOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-30"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
+    </>
   );
 }

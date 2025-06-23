@@ -1,171 +1,95 @@
 import { Check } from "lucide-react";
 
 const Pricing = () => {
-  const pricingPlans = [
-    {
-      name: "Consultation",
-      price: "₹5,000",
-      period: "per session",
-      description: "Initial design consultation and concept development",
-      features: [
-        "1-hour design consultation",
-        "Space analysis and assessment",
-        "Initial concept sketches",
-        "Design recommendations",
-        "Follow-up consultation"
-      ],
-      popular: false
-    },
-    {
-      name: "Architectural Design",
-      price: "₹150",
-      period: "per sq ft",
-      description: "Complete architectural design services",
-      features: [
-        "Site analysis and planning",
-        "Architectural drawings (2D & 3D)",
-        "Structural coordination",
-        "Statutory approvals assistance",
-        "Construction supervision",
-        "Interior design consultation"
-      ],
-      popular: true
-    },
-    {
-      name: "Interior Design",
-      price: "₹75",
-      period: "per sq ft",
-      description: "Comprehensive interior design solutions",
-      features: [
-        "Space planning and layout",
-        "3D visualization and renders",
-        "Material and finish selection",
-        "Furniture and lighting design",
-        "Project management",
-        "Styling and accessories"
-      ],
-      popular: false
-    },
-    {
-      name: "Landscape Design",
-      price: "₹50",
-      period: "per sq ft",
-      description: "Beautiful landscape and garden design",
-      features: [
-        "Site survey and analysis",
-        "Landscape master plan",
-        "Plant selection and design",
-        "Hardscape design",
-        "Irrigation planning",
-        "Maintenance guidelines"
-      ],
-      popular: false
-    }
+  const features = [
+    { name: "2D Floor Plans", elegant: true, elite: true },
+    { name: "3D Elevation Designing", elegant: true, elite: true },
+    { name: "Architectural & Structural Drawings", elegant: true, elite: true },
+    { name: "Ghar 360 (AR/VR) Planning & Interior", elegant: false, elite: true },
+    { name: "Door, Windows, Railings Planning", elegant: true, elite: true },
+    { name: "Premium Soil & Supervision", elegant: false, elite: true },
+    { name: "Compliance & Design Coordination", elegant: false, elite: true },
+    { name: "High Res 3D Render", elegant: false, elite: true }
   ];
 
   return (
-    <div className="min-h-screen bg-white pt-16">
+    <div className="min-h-screen bg-white">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-12 md:py-20">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-aakaara-text font-playfair text-[32px] md:text-[40px] leading-[40px] md:leading-[48px] font-normal mb-6">
-            Our Services & Pricing
+            Pricing Plans
           </h1>
           <p className="text-aakaara-text text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] font-normal max-w-3xl mx-auto">
-            Transparent pricing for our comprehensive design services. Every project is unique, and we provide customized solutions tailored to your specific needs and budget.
+            Choose the perfect package for your architectural and design needs. We offer comprehensive solutions tailored to your requirements.
           </p>
         </div>
 
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {pricingPlans.map((plan, index) => (
-            <div
-              key={plan.name}
-              className={`relative rounded-lg p-6 animate-slide-up hover-scale ${
-                plan.popular
-                  ? "bg-aakaara-brown text-white shadow-xl scale-105"
-                  : "bg-white border border-aakaara-brown/20 shadow-lg"
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {plan.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-aakaara-dark-brown text-white px-3 py-1 rounded-full text-xs font-medium">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-
-              <div className="text-center mb-6">
-                <h3 className={`text-xl font-medium mb-2 ${plan.popular ? "text-white" : "text-aakaara-text"}`}>
-                  {plan.name}
-                </h3>
-                <div className={`text-3xl font-bold mb-1 ${plan.popular ? "text-white" : "text-aakaara-brown"}`}>
-                  {plan.price}
-                </div>
-                <div className={`text-sm ${plan.popular ? "text-aakaara-light-brown" : "text-aakaara-text/60"}`}>
-                  {plan.period}
-                </div>
-                <p className={`text-sm mt-4 ${plan.popular ? "text-aakaara-light-brown" : "text-aakaara-text/80"}`}>
-                  {plan.description}
-                </p>
+        {/* Pricing Table */}
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+            {/* Header Row */}
+            <div className="grid grid-cols-3">
+              <div className="bg-aakaara-brown text-white p-6 text-center">
+                <h3 className="text-lg font-medium">Deliverables</h3>
               </div>
-
-              <ul className="space-y-3 mb-6">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start">
-                    <Check 
-                      size={16} 
-                      className={`mr-2 mt-0.5 flex-shrink-0 ${
-                        plan.popular ? "text-aakaara-light-brown" : "text-aakaara-brown"
-                      }`} 
-                    />
-                    <span className={`text-sm ${plan.popular ? "text-white" : "text-aakaara-text"}`}>
-                      {feature}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <button
-                className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
-                  plan.popular
-                    ? "bg-white text-aakaara-brown hover:bg-aakaara-light-brown hover:text-aakaara-dark-brown"
-                    : "bg-aakaara-brown text-white hover:bg-aakaara-dark-brown"
-                }`}
-              >
-                Get Started
-              </button>
+              <div className="bg-aakaara-brown text-white p-6 text-center border-l border-aakaara-dark-brown">
+                <h3 className="text-lg font-medium">Elegance</h3>
+                <p className="text-sm mt-1 text-aakaara-light-brown">₹75/sq ft</p>
+              </div>
+              <div className="bg-aakaara-brown text-white p-6 text-center border-l border-aakaara-dark-brown">
+                <h3 className="text-lg font-medium">Elite</h3>
+                <p className="text-sm mt-1 text-aakaara-light-brown">₹125/sq ft</p>
+              </div>
             </div>
-          ))}
+
+            {/* Feature Rows */}
+            {features.map((feature, index) => (
+              <div key={feature.name} className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
+                <div className="p-4 border-b border-gray-200">
+                  <span className="text-aakaara-text font-medium">{feature.name}</span>
+                </div>
+                <div className="p-4 border-b border-l border-gray-200 text-center">
+                  {feature.elegant ? (
+                    <Check size={20} className="text-green-600 mx-auto" />
+                  ) : (
+                    <span className="text-gray-400">×</span>
+                  )}
+                </div>
+                <div className="p-4 border-b border-l border-gray-200 text-center">
+                  {feature.elite ? (
+                    <Check size={20} className="text-green-600 mx-auto" />
+                  ) : (
+                    <span className="text-gray-400">×</span>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Additional Information */}
-        <div className="text-center max-w-4xl mx-auto animate-fade-in animation-delay-400">
+        <div className="text-center max-w-4xl mx-auto mt-16 animate-fade-in animation-delay-400">
           <h2 className="text-aakaara-text font-playfair text-[24px] md:text-[28px] font-normal mb-6">
-            Custom Solutions Available
+            Why Choose Our Services?
           </h2>
-          <p className="text-aakaara-text text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] font-normal mb-8">
-            Every project is unique, and our pricing reflects the specific requirements, complexity, and scope of work. 
-            We offer flexible payment plans and can customize our services to fit your budget and timeline.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="p-4">
-              <h4 className="text-aakaara-brown font-medium mb-2">Free Consultation</h4>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <div className="text-center">
+              <h4 className="text-aakaara-brown font-medium mb-3">Expert Design</h4>
               <p className="text-aakaara-text/80 text-sm">
-                Initial 30-minute consultation to discuss your project requirements
+                Professional architectural and interior design services by certified experts
               </p>
             </div>
-            <div className="p-4">
-              <h4 className="text-aakaara-brown font-medium mb-2">Flexible Payments</h4>
+            <div className="text-center">
+              <h4 className="text-aakaara-brown font-medium mb-3">Quality Assurance</h4>
               <p className="text-aakaara-text/80 text-sm">
-                Payment plans tailored to your project timeline and budget
+                High-quality deliverables with attention to detail and client satisfaction
               </p>
             </div>
-            <div className="p-4">
-              <h4 className="text-aakaara-brown font-medium mb-2">Warranty</h4>
+            <div className="text-center">
+              <h4 className="text-aakaara-brown font-medium mb-3">Timely Delivery</h4>
               <p className="text-aakaara-text/80 text-sm">
-                1-year warranty on all design deliverables and documentation
+                Project completion within agreed timelines with regular updates
               </p>
             </div>
           </div>

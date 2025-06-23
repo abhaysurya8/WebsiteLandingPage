@@ -13,23 +13,44 @@ const Contact = () => {
     projectType: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
-    });
     
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: "",
-      projectType: ""
-    });
+    try {
+      // Send email using the backend API
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+          projectType: ""
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

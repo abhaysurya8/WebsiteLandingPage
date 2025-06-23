@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 
+// To add more projects, simply add new objects to this array following the same structure
 const Projects = () => {
   const projects = [
     {
@@ -50,10 +51,20 @@ const Projects = () => {
       image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
       description: "A sleek contemporary house design with clean lines and modern aesthetics."
     }
+    // TO ADD MORE PROJECTS: Copy the structure above and add new projects here
+    // Example:
+    // {
+    //   id: 7,
+    //   slug: "your-project-slug",
+    //   title: "Your Project Title",
+    //   category: "Architecture" | "Interior Design" | "Landscape",
+    //   image: "your-image-url",
+    //   description: "Your project description"
+    // }
   ];
 
   return (
-    <div className="min-h-screen bg-white pt-16">
+    <div className="min-h-screen bg-white">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-12 md:py-20">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
