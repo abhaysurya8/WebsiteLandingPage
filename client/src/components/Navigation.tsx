@@ -21,10 +21,10 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Hamburger Menu Button - Fixed Position */}
+      {/* Hamburger Menu Button - Fixed Position with more left spacing */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="fixed top-6 left-6 z-50 p-2 text-aakaara-text hover:text-aakaara-brown transition-colors"
+        className="fixed top-6 left-4 z-50 p-3 text-aakaara-text hover:text-aakaara-brown transition-colors"
         aria-label="Toggle menu"
       >
         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -34,7 +34,7 @@ export default function Navigation() {
       <div className={`fixed top-0 left-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${
         isMenuOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
-        <div className="pt-20 px-8">
+        <div className="pt-20 px-6">
           <nav className="space-y-6">
             {navigation.map((item) => (
               <Link

@@ -14,7 +14,7 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-12 md:py-20">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:pl-20 py-12 md:py-20">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-aakaara-text font-playfair text-[32px] md:text-[40px] leading-[40px] md:leading-[48px] font-normal mb-6">

@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-12 md:py-20">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:pl-20 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
           {/* Profile Image - TO CHANGE YOUR PICTURE: Replace the src URL below with your image */}
           <div className="flex justify-center lg:justify-start animate-slide-in-left">
