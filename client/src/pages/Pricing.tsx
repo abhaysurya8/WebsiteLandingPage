@@ -35,11 +35,11 @@ const Pricing = () => {
               </div>
               <div className="bg-aakaara-brown text-white p-6 text-center border-l border-aakaara-dark-brown">
                 <h3 className="text-lg font-medium">Elegance</h3>
-                <p className="text-sm mt-1 text-aakaara-light-brown">₹75/sq ft</p>
+                <p className="text-sm mt-1 text-aakaara-light-brown">(₹1,779)</p>
               </div>
               <div className="bg-aakaara-brown text-white p-6 text-center border-l border-aakaara-dark-brown">
                 <h3 className="text-lg font-medium">Elite</h3>
-                <p className="text-sm mt-1 text-aakaara-light-brown">₹125/sq ft</p>
+                <p className="text-sm mt-1 text-aakaara-light-brown">(₹2,249)</p>
               </div>
             </div>
 

@@ -1,75 +1,18 @@
 import { useRoute, Link } from "wouter";
 import { ArrowLeft, Calendar, MapPin, Users } from "lucide-react";
+import { getProjectBySlug } from "@/data/projects";
+
+// PROJECT DETAIL PAGE
+// ===================
+// This page shows detailed information about a specific project
+// TO ADD PROJECT DETAILS: Edit /src/data/projects.ts
 
 const ProjectDetail = () => {
   const [, params] = useRoute("/projects/:slug");
   const slug = params?.slug;
 
-  // TO ADD MORE PROJECT DETAILS: Add new project data here following the same structure
-  const projectData: Record<string, any> = {
-    "modern-residential-villa": {
-      title: "Modern Residential Villa",
-      category: "Architecture",
-      location: "Bangalore, Karnataka",
-      year: "2023",
-      client: "Private Residence",
-      area: "3,500 sq ft",
-      images: [
-        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
-      ],
-      description: "A contemporary villa design that seamlessly blends indoor and outdoor living spaces, featuring clean lines, natural materials, and sustainable design principles.",
-      challenge: "The primary challenge was to create a modern family home that maintains privacy while maximizing natural light and creating seamless indoor-outdoor flow.",
-      solution: "We designed a series of interconnected pavilions around a central courtyard, using large sliding glass doors, natural stone, and wooden elements to create harmony with the landscape.",
-      features: [
-        "Open-plan living spaces with double-height ceilings",
-        "Central courtyard with water feature",
-        "Sustainable materials and energy-efficient systems",
-        "Private garden with outdoor entertainment area",
-        "Smart home automation system"
-      ]
-    },
-    "urban-apartment-interior": {
-      title: "Urban Apartment Interior",
-      category: "Interior Design",
-      location: "Mumbai, Maharashtra",
-      year: "2023",
-      client: "Young Professional",
-      area: "1,200 sq ft",
-      images: [
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-        "https://images.unsplash.com/photo-1556020685-ae41abfc9365?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
-      ],
-      description: "Sophisticated interior design for a modern urban apartment with maximized space efficiency and contemporary aesthetics.",
-      challenge: "Transform a compact apartment into a functional and stylish home that accommodates work, rest, and entertainment needs.",
-      solution: "We employed smart storage solutions, multi-functional furniture, and a neutral color palette with accent colors to create the illusion of space while maintaining style.",
-      features: [
-        "Custom-built storage solutions",
-        "Multi-functional furniture pieces",
-        "Modern kitchen with breakfast bar",
-        "Home office integration",
-        "Artistic lighting design"
-      ]
-    }
-    // TO ADD MORE PROJECT DETAILS: Follow this structure
-    // "your-project-slug": {
-    //   title: "Project Title",
-    //   category: "Category",
-    //   location: "Location",
-    //   year: "Year",
-    //   client: "Client Type",
-    //   area: "Area",
-    //   images: ["image1.jpg", "image2.jpg", "image3.jpg"],
-    //   description: "Project description",
-    //   challenge: "Project challenge",
-    //   solution: "Project solution",
-    //   features: ["Feature 1", "Feature 2", "Feature 3"]
-    // }
-  };
+  const project = slug ? getProjectBySlug(slug) : null;
 
-  const project = slug ? projectData[slug] : null;
 
   if (!project) {
     return (
