@@ -18,7 +18,7 @@ const LoadingScreen = () => {
     const interval = setInterval(() => {
       currentIndex = (currentIndex + 1) % loadingSteps.length;
       setLoadingText(loadingSteps[currentIndex]);
-    }, 800);
+    }, 600);
 
     return () => clearInterval(interval);
   }, []);
