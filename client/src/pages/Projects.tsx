@@ -15,9 +15,10 @@ const Projects = () => {
     ? projectList 
     : projectList.filter(project => project.category === selectedCategory);
 
-  // Masonry layout helper - distributes projects into columns
-  const getColumnProjects = (columnIndex: number, totalColumns: number) => {
-    return filteredProjects.filter((_, index) => index % totalColumns === columnIndex);
+  // Random height generator for varied masonry layout
+  const getRandomHeight = (index: number) => {
+    const heights = ['h-64', 'h-72', 'h-80', 'h-56', 'h-68'];
+    return heights[index % heights.length];
   };
 
   return (
@@ -50,35 +51,13 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Masonry Layout for Projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {/* Column 1 */}
-          <div className="space-y-6">
-            {getColumnProjects(0, 4).map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index * 4} />
-            ))}
-          </div>
-          
-          {/* Column 2 */}
-          <div className="space-y-6 hidden md:block">
-            {getColumnProjects(1, 4).map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index * 4 + 1} />
-            ))}
-          </div>
-          
-          {/* Column 3 */}
-          <div className="space-y-6 hidden lg:block">
-            {getColumnProjects(2, 4).map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index * 4 + 2} />
-            ))}
-          </div>
-          
-          {/* Column 4 */}
-          <div className="space-y-6 hidden xl:block">
-            {getColumnProjects(3, 4).map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index * 4 + 3} />
-            ))}
-          </div>
+        {/* Clean Masonry Layout for Projects */}
+        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 md:gap-8">
+          {filteredProjects.map((project, index) => (
+            <div key={project.id} className="break-inside-avoid mb-6 md:mb-8">
+              <ProjectCard project={project} index={index} />
+            </div>
+          ))}
         </div>
 
         {/* Project Count Display */}
@@ -124,35 +103,31 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project, index }: ProjectCardProps) => {
-  // Vary card heights for masonry effect
-  const heights = ["h-64", "h-80", "h-72", "h-96", "h-60", "h-88"];
-  const height = heights[index % heights.length];
-
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group block animate-slide-up hover-scale"
-      style={{ animationDelay: `${(index % 8) * 0.1}s` }}
+      className="group block animate-slide-up"
+      style={{ animationDelay: `${(index % 12) * 0.05}s` }}
     >
-      <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
-        <div className={`${height} overflow-hidden relative`}>
+      <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100/60 hover:border-aakaara-brown/20">
+        <div className="relative overflow-hidden">
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-            <div className="text-white text-xs font-medium bg-aakaara-brown/80 px-2 py-1 rounded-full inline-block">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+            <div className="text-white text-xs font-medium bg-aakaara-brown/90 px-3 py-1.5 rounded-full shadow-lg backdrop-blur-sm">
               {project.category}
             </div>
           </div>
         </div>
         <div className="p-6">
-          <h3 className="text-aakaara-text text-lg font-medium mb-3 group-hover:text-aakaara-brown transition-colors line-clamp-2">
+          <h3 className="text-aakaara-text text-lg font-semibold mb-3 group-hover:text-aakaara-brown transition-colors duration-300 line-clamp-2 leading-tight">
             {project.title}
           </h3>
-          <p className="text-aakaara-text/80 text-sm leading-relaxed line-clamp-3">
+          <p className="text-aakaara-text/75 text-sm leading-relaxed line-clamp-3">
             {project.description}
           </p>
         </div>
