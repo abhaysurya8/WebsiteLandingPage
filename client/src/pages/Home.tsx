@@ -35,15 +35,15 @@ const Home = () => {
 
         {/* Right Sidebar - Brown strip extending full height, no overflow */}
         <div className="bg-aakaara-dark-brown w-[200px] md:w-[220px] min-h-screen flex-shrink-0 flex items-center justify-center animate-slide-in-right">
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2">
             <div className="text-aakaara-light-brown text-[14px] space-y-4">
               <p>Architecture</p>
               <p>Interior</p>
               <p>Landscape</p>
             </div>
             
-            {/* Aakaara text - ONLY Rigot Bold, centered together */}
-            <div className="font-rigot font-bold text-[80px] vertical-text leading-[80px] select-none text-aakaara-light-brown">
+            {/* Aakaara text - ONLY Rigot Bold, bigger and closer */}
+            <div className="font-rigot font-bold text-[90px] vertical-text leading-[90px] select-none text-aakaara-light-brown">
               aakaara
             </div>
           </div>
