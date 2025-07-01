@@ -8,14 +8,21 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    subject: "",
     message: "",
     projectType: ""
   });
+  const [phoneError, setPhoneError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Validate phone number: must have 10 digits at the end
+    const digits = formData.phone.replace(/\D/g, "");
+    if (digits.length !== 10) {
+      setPhoneError("Please enter a valid 10-digit phone number");
+      return;
+    }
+
     try {
       // Send email using the backend API
       const response = await fetch('/api/contact', {
@@ -37,7 +44,6 @@ const Contact = () => {
           name: "",
           email: "",
           phone: "",
-          subject: "",
           message: "",
           projectType: ""
         });
@@ -54,9 +60,19 @@ const Contact = () => {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    if (name === "phone") {
+      // Allow only numbers, spaces, and optional leading +
+      if (!/^\+?\d*\s*\d*$/.test(value)) {
+        setPhoneError("Please enter a valid phone number");
+        return;
+      } else {
+        setPhoneError("");
+      }
+    }
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
   };
 
@@ -176,9 +192,14 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
+                    maxLength={16}
+                    pattern="^(\+\\d{1,4}[ ]?)?\\d{10}$"
                     className="w-full px-4 py-3 border border-aakaara-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-aakaara-brown focus:border-transparent"
-                    placeholder="+91 XXXXX XXXXX"
+                    placeholder="+91 9876543210 or 9876543210"
                   />
+                  {phoneError && (
+                    <p className="text-red-600 text-xs mt-1">{phoneError}</p>
+                  )}
                 </div>
                 
                 <div>
@@ -200,22 +221,6 @@ const Contact = () => {
                     <option value="other">Other</option>
                   </select>
                 </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-aakaara-text font-medium mb-2">
-                  Subject *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-aakaara-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-aakaara-brown focus:border-transparent"
-                  placeholder="Brief description of your project"
-                />
               </div>
 
               <div>

@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#5a3a22] text-[#d9c4b0]">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-8">
+    <footer className="bg-[#5a3a22] text-[#d9c4b0] w-full">
+      <div className="px-6 md:px-12 py-12">
         <h2 className="font-quicksand text-[32px] md:text-[36px] leading-[42px] font-normal border-b border-[#d9c4b0]/30 pb-4 mb-6">
           Ar. Shivangi Shivakumar
         </h2>

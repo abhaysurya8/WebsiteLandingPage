@@ -6,7 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white pr-[220px]">
       <Navigation />
       <main>
         <HeroSection />

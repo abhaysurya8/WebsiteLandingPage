@@ -9,11 +9,13 @@ import { projectList, getAllCategories } from "@/data/projects";
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const categories = ["All", ...getAllCategories()];
+  const categories = ["All", "Architecture & Interior", "Landscape"];
   
-  const filteredProjects = selectedCategory === "All" 
-    ? projectList 
-    : projectList.filter(project => project.category === selectedCategory);
+  const filteredProjects = selectedCategory === "All"
+    ? projectList
+    : selectedCategory === "Landscape"
+      ? projectList.filter(project => project.category === "Landscape")
+      : projectList.filter(project => project.category === "Architecture" || project.category === "Interior Design");
 
   // Random height generator for varied masonry layout
   const getRandomHeight = (index: number) => {
@@ -41,8 +43,8 @@ const Projects = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-aakaara-brown text-white shadow-lg transform scale-105"
-                    : "bg-white text-aakaara-brown border border-aakaara-brown/20 hover:border-aakaara-brown hover:text-aakaara-brown"
+                    ? "bg-aakaara-brown text-white border border-aakaara-brown shadow-lg transform scale-105"
+                    : "bg-white text-aakaara-brown border border-aakaara-brown hover:bg-aakaara-brown hover:text-white"
                 }`}
               >
                 {category}
@@ -51,12 +53,10 @@ const Projects = () => {
           </div>
         </div>
 
-        {/* Clean Masonry Layout for Projects */}
-        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 md:gap-8">
+        {/* Responsive Grid Layout for Projects */}
+        <div className="grid gap-8" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}>
           {filteredProjects.map((project, index) => (
-            <div key={project.id} className="break-inside-avoid mb-6 md:mb-8">
-              <ProjectCard project={project} index={index} />
-            </div>
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
@@ -114,7 +114,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">

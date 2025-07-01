@@ -36,7 +36,7 @@ export const projectList: Project[] = [
     slug: "ujjwal-residence",
     title: "Mr. Ujjwal's Residence",
     category: "Architecture",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/deets/arch & interiors - ujjwal residence/32.jpg",
     description: "Featuring warm, natural materials and bold, dynamic accents with modular furniture and biophilic design elements."
   },
   {
@@ -44,7 +44,7 @@ export const projectList: Project[] = [
     slug: "sirigere-mane",
     title: "Sirigere Mane",
     category: "Architecture",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/deets/arch & interiors - sirigere mane/625226810543813.jpg",
     description: "Modern urban apartment in Bangalore's heart, redefining contemporary living with elegance and sustainability."
   },
   {
@@ -52,7 +52,7 @@ export const projectList: Project[] = [
     slug: "prajwal-residence",
     title: "Mr. Prajwal's Residence",
     category: "Architecture",
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/deets/arch & interiors - prajwal mane/9.jpg",
     description: "Luxury residential project blending sophisticated design with unparalleled comfort and contemporary architecture."
   },
   {
@@ -68,7 +68,7 @@ export const projectList: Project[] = [
     slug: "kumar-residence",
     title: "Mr. Kumar's Residence",
     category: "Architecture",
-    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/deets/arch & interiors - kumar mane/9.jpg",
     description: "Modern elegance combined with functional design, creating serene living space integrated with natural surroundings."
   },
   {
@@ -86,7 +86,7 @@ export const projectList: Project[] = [
     slug: "terrace-garden",
     title: "Terrace Garden",
     category: "Landscape",
-    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/deets/landscape - terrace garden/629454899040197.jpg",
     description: "Landscaped planting areas with ornamental plants, seating zones, and infinity pool creating serene urban escape."
   },
   {
@@ -214,22 +214,16 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     category: "Landscape",
     location: "Bangalore, Karnataka",
     year: "2024",
-    client: "Residential",
-    area: "2,500 sq ft",
-    images: [
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
-    ],
-    description: "The design typically includes landscaped planting areas with ornamental or edible plants, seating zones, and an infinity pool that creates a visual effect of water extending to the horizon.",
-    challenge: "Maximizing space while enhancing urban living and providing a serene escape in a limited terrace area.",
-    solution: "Strategic placement of landscaped areas, seating zones, and infinity pool considering structural load, waterproofing, and drainage.",
+    client: "Private Residence",
+    area: "1,200 sq ft",
+    images: ["/deets/landscape - terrace garden/629454899040197.jpg"],
+    description: "Landscaped planting areas with ornamental plants, seating zones, and infinity pool creating serene urban escape.",
+    challenge: "Maximizing green space on a terrace.",
+    solution: "Used planters and seating zones for a relaxing environment.",
     features: [
-      "Landscaped planting areas with ornamental plants",
-      "Comfortable seating zones",
-      "Infinity pool with horizon effect",
-      "Structural load consideration",
-      "Sustainable drainage practices"
+      "Infinity pool",
+      "Ornamental plants",
+      "Seating zones"
     ]
   },
   "mvj-college-office": {
@@ -326,6 +320,61 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
       "Open layout design",
       "Rustic charm maintenance",
       "Sustainable living support"
+    ]
+  },
+  "prajwal-residence": {
+    slug: "prajwal-residence",
+    title: "Mr. Prajwal's Residence",
+    category: "Architecture",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Private Residence",
+    area: "2,500 sq ft",
+    images: ["/deets/arch & interiors - prajwal mane/9.jpg"],
+    description: "Luxury residential project blending sophisticated design with unparalleled comfort and contemporary architecture.",
+    challenge: "Designing a luxury residence that balances comfort and sophistication.",
+    solution: "Used high-end materials and modern design principles for a unique living experience.",
+    features: [
+      "Spacious living areas",
+      "Modern kitchen",
+      "Private garden",
+      "Energy-efficient lighting"
+    ]
+  },
+  "shivakumar-residence": {
+    slug: "shivakumar-residence",
+    title: "Mr. Shivakumar's Residence",
+    category: "Architecture",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Private Residence",
+    area: "3,000 sq ft",
+    images: ["https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"],
+    description: "Luxury residential project showcasing harmonious balance of contemporary architecture and timeless elegance.",
+    challenge: "Blending contemporary and timeless design elements.",
+    solution: "Integrated classic and modern features for a harmonious look.",
+    features: [
+      "Elegant interiors",
+      "Spacious bedrooms",
+      "Landscaped outdoor area"
+    ]
+  },
+  "kumar-residence": {
+    slug: "kumar-residence",
+    title: "Mr. Kumar's Residence",
+    category: "Architecture",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Private Residence",
+    area: "2,800 sq ft",
+    images: ["/deets/arch & interiors - kumar mane/9.jpg"],
+    description: "Modern elegance combined with functional design, creating serene living space integrated with natural surroundings.",
+    challenge: "Creating a serene and functional living space.",
+    solution: "Used open layouts and natural materials for tranquility.",
+    features: [
+      "Open-plan living",
+      "Natural materials",
+      "Large windows"
     ]
   }
 };
