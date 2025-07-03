@@ -44,7 +44,7 @@ export const projectList: Project[] = [
     slug: "sirigere-mane",
     title: "Sirigere Mane",
     category: "Architecture",
-    image: "/deets/arch & interiors - sirigere mane/625226810543813.jpg",
+    image: "/Images/sirigere 1.jpg",
     description: "Modern urban apartment in Bangalore's heart, redefining contemporary living with elegance and sustainability."
   },
   {
@@ -52,7 +52,7 @@ export const projectList: Project[] = [
     slug: "prajwal-residence",
     title: "Mr. Prajwal's Residence",
     category: "Architecture",
-    image: "/deets/arch & interiors - prajwal mane/9.jpg",
+    image: "/Images/prajwal 1.png",
     description: "Luxury residential project blending sophisticated design with unparalleled comfort and contemporary architecture."
   },
   {
@@ -60,7 +60,7 @@ export const projectList: Project[] = [
     slug: "shivakumar-residence",
     title: "Mr. Shivakumar's Residence",
     category: "Architecture",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/Images/shivakumar 2.jpg",
     description: "Luxury residential project showcasing harmonious balance of contemporary architecture and timeless elegance."
   },
   {
@@ -68,7 +68,7 @@ export const projectList: Project[] = [
     slug: "kumar-residence",
     title: "Mr. Kumar's Residence",
     category: "Architecture",
-    image: "/deets/arch & interiors - kumar mane/9.jpg",
+    image: "/Images/kumar 2.jpg",
     description: "Modern elegance combined with functional design, creating serene living space integrated with natural surroundings."
   },
   {
@@ -76,7 +76,7 @@ export const projectList: Project[] = [
     slug: "coworking-space",
     title: "Co-Working Space",
     category: "Interior Design",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/Images/coworkingspace1.jpg",
     description: "Bangalore coworking space fostering creativity and collaboration with modular furniture and biophilic design."
   },
   
@@ -86,7 +86,7 @@ export const projectList: Project[] = [
     slug: "terrace-garden",
     title: "Terrace Garden",
     category: "Landscape",
-    image: "/deets/landscape - terrace garden/629454899040197.jpg",
+    image: "/Images/terrace 1.jpg",
     description: "Landscaped planting areas with ornamental plants, seating zones, and infinity pool creating serene urban escape."
   },
   {
@@ -94,23 +94,15 @@ export const projectList: Project[] = [
     slug: "mvj-college-office",
     title: "MVJ College Office",
     category: "Landscape",
-    image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/Images/mvj 1.png",
     description: "Seamless integration of built structures with rural landscape using natural materials and native vegetation."
-  },
-  {
-    id: 9,
-    slug: "high-rise-apartment",
-    title: "High Rise Apartment",
-    category: "Landscape",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    description: "Efficient vertical space utilization with focus on sustainability, accessibility, and modern amenities integration."
   },
   {
     id: 10,
     slug: "girish-backyard",
     title: "Girish's Backyard",
     category: "Landscape",
-    image: "https://images.unsplash.com/photo-1574691250077-03a929faece5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/Images/girish 1.png",
     description: "Farmhouse landscape design enhancing functionality and aesthetic appeal with natural materials and native plants."
   },
   {
@@ -118,7 +110,7 @@ export const projectList: Project[] = [
     slug: "anil-farmhouse",
     title: "Anil's Farmhouse",
     category: "Landscape",
-    image: "https://images.unsplash.com/photo-1585128792020-803d29415281?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/Images/anil 1.jpg",
     description: "Harmonious blend between built environment and rural landscape maintaining rustic charm and sustainable living."
   },
   {
@@ -179,9 +171,10 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     client: "Urban Professionals",
     area: "1,800 sq ft",
     images: [
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+      "/Images/sirigere 1.jpg",
+      "/Images/sirigere 2.jpg",
+      "/Images/sirigere 3.jpg",
+      "/Images/sirigere 4.jpg"
     ],
     description: "Located in the bustling heart of Bangalore, this residential apartment project redefines modern urban living with a focus on elegance, functionality, and sustainability.",
     challenge: "Designing modern urban apartments that cater to professionals and families while maintaining elegance and sustainability.",
@@ -203,9 +196,9 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     client: "Commercial",
     area: "5,000 sq ft",
     images: [
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+      "/Images/coworkingspace1.jpg",
+      "/Images/coworkingspace2.jpg",
+      "/Images/coworkingspace3.jpg"
     ],
     description: "Located in the heart of Bangalore, this coworking space is designed to foster creativity, collaboration, and productivity for professionals and businesses alike.",
     challenge: "Creating a flexible workspace that adapts to the dynamic needs of today's workforce while promoting creativity and collaboration.",
@@ -226,7 +219,10 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     year: "2024",
     client: "Private Residence",
     area: "1,200 sq ft",
-    images: ["/deets/landscape - terrace garden/629454899040197.jpg"],
+    images: [
+      "/Images/terrace 1.jpg",
+      "/Images/terrace 2.jpg"
+    ],
     description: "Landscaped planting areas with ornamental plants, seating zones, and infinity pool creating serene urban escape.",
     challenge: "Maximizing green space on a terrace.",
     solution: "Used planters and seating zones for a relaxing environment.",
@@ -245,9 +241,10 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     client: "Educational Institution",
     area: "8,000 sq ft",
     images: [
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+      "/Images/mvj 1.png",
+      "/Images/mvj 2.png",
+      "/Images/mvj 3.png",
+      "/Images/mvj 4.png"
     ],
     description: "The design aims to seamlessly integrate the built structures with the rural landscape by using natural materials, native vegetation, and open, flowing layouts that preserve rustic charm and promote sustainable living.",
     challenge: "Integrating modern office requirements while maintaining harmony with the rural landscape setting.",
@@ -260,30 +257,6 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
       "Sustainable living promotion"
     ]
   },
-  "high-rise-apartment": {
-    slug: "high-rise-apartment",
-    title: "High Rise Apartment",
-    category: "Landscape",
-    location: "Bangalore, Karnataka",
-    year: "2024",
-    client: "Residential Complex",
-    area: "15,000 sq ft",
-    images: [
-      "https://images.unsplash.com/photo-1541625602330-2277a4c46182?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1558618047-3c8c5d5c2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
-    ],
-    description: "The project focuses on efficient vertical space utilization, structural integrity, accessibility, and integration of modern amenities such as elevators, parking, security, and communal areas.",
-    challenge: "Efficiently utilizing vertical space while ensuring structural integrity and accessibility for high-rise living.",
-    solution: "Strategic planning for modern amenities integration with focus on sustainability, fire safety, and local building code compliance.",
-    features: [
-      "Efficient vertical space utilization",
-      "Modern amenities integration",
-      "Elevator and parking systems",
-      "Security and communal areas",
-      "Fire safety compliance"
-    ]
-  },
   "girish-backyard": {
     slug: "girish-backyard",
     title: "Girish's Backyard",
@@ -293,19 +266,16 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     client: "Private Farmhouse",
     area: "4,200 sq ft",
     images: [
-      "https://images.unsplash.com/photo-1558618047-3c8c5d5c2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+      "/Images/girish 1.png",
+      "/Images/girish 2.png"
     ],
-    description: "The landscape farmhouse project involves designing the outdoor spaces around a farmhouse to enhance its functionality, aesthetic appeal, and connection to nature. The design emphasizes a harmonious blend between the built environment and the rural landscape, often using natural materials, native plants, and open layouts to maintain the rustic charm and support sustainable living.",
-    challenge: "Enhancing farmhouse outdoor functionality while maintaining connection to nature and rustic appeal.",
-    solution: "Harmonious blend of built environment with rural landscape using natural materials, native plants, and open layouts.",
+    description: "Farmhouse landscape design enhancing functionality and aesthetic appeal with natural materials and native plants.",
+    challenge: "Designing a functional and beautiful backyard for a farmhouse.",
+    solution: "Used natural materials and native plants to enhance both functionality and aesthetics.",
     features: [
-      "Enhanced functionality and aesthetic appeal",
-      "Natural materials and native plants",
-      "Open layout design",
-      "Rustic charm maintenance",
-      "Sustainable living support"
+      "Functional backyard layout",
+      "Use of natural materials",
+      "Native plant selection"
     ]
   },
   "anil-farmhouse": {
@@ -315,21 +285,23 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     location: "Bangalore, Karnataka",
     year: "2024",
     client: "Private Farmhouse",
-    area: "3,800 sq ft",
+    area: "6,000 sq ft",
     images: [
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1558618047-3c8c5d5c2a8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+      "/Images/anil 1.jpg",
+      "/Images/anil 2.jpg",
+      "/Images/anil 3.jpg",
+      "/Images/anil 4.jpg",
+      "/Images/anil 5.jpg"
     ],
-    description: "The landscape farmhouse project involves designing the outdoor spaces around a farmhouse to enhance its functionality, aesthetic appeal, and connection to nature. The design emphasizes a harmonious blend between the built environment and the rural landscape, often using natural materials, native plants, and open layouts to maintain the rustic charm and support sustainable living.",
-    challenge: "Creating functional outdoor spaces that enhance aesthetic appeal while maintaining natural harmony.",
-    solution: "Harmonious blend of built environment with rural landscape using natural materials, native plants, and open layouts.",
+    description: "Harmonious blend between built environment and rural landscape maintaining rustic charm and sustainable living.",
+    challenge: "Blending built environment with rural landscape while maintaining rustic charm.",
+    solution: "Used natural materials and open layouts to create a harmonious and sustainable farmhouse.",
     features: [
-      "Enhanced functionality and aesthetic appeal",
-      "Natural materials and native plants",
-      "Open layout design",
-      "Rustic charm maintenance",
-      "Sustainable living support"
+      "Rustic charm",
+      "Sustainable living",
+      "Natural materials",
+      "Open layouts",
+      "Harmonious design"
     ]
   },
   "prajwal-residence": {
@@ -340,7 +312,13 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     year: "2024",
     client: "Private Residence",
     area: "2,500 sq ft",
-    images: ["/deets/arch & interiors - prajwal mane/9.jpg"],
+    images: [
+      "/Images/prajwal 1.png",
+      "/Images/prajwal 2.png",
+      "/Images/prajwal 3.png",
+      "/Images/prajwal 4.png",
+      "/Images/prajwal 5.png"
+    ],
     description: "Luxury residential project blending sophisticated design with unparalleled comfort and contemporary architecture.",
     challenge: "Designing a luxury residence that balances comfort and sophistication.",
     solution: "Used high-end materials and modern design principles for a unique living experience.",
@@ -359,7 +337,12 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     year: "2024",
     client: "Private Residence",
     area: "3,000 sq ft",
-    images: ["https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"],
+    images: [
+      "/Images/shivakumar 2.jpg",
+      "/Images/shivakumar 3.jpg",
+      "/Images/shivakumar 4.jpg",
+      "/Images/shivakumar's 1.jpg"
+    ],
     description: "Luxury residential project showcasing harmonious balance of contemporary architecture and timeless elegance.",
     challenge: "Blending contemporary and timeless design elements.",
     solution: "Integrated classic and modern features for a harmonious look.",
@@ -377,7 +360,13 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     year: "2024",
     client: "Private Residence",
     area: "2,800 sq ft",
-    images: ["/deets/arch & interiors - kumar mane/9.jpg"],
+    images: [
+      "/Images/kumar 2.jpg",
+      "/Images/kumar 3.jpg",
+      "/Images/kumar 4.jpg",
+      "/Images/kumar 5.jpg",
+      "/Images/kumar's 1.jpg"
+    ],
     description: "Modern elegance combined with functional design, creating serene living space integrated with natural surroundings.",
     challenge: "Creating a serene and functional living space.",
     solution: "Used open layouts and natural materials for tranquility.",

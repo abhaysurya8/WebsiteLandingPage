@@ -1354,6 +1354,10 @@ body{
   max-width: 100%;
 }
 
+.max-w-\[220px\]{
+  max-width: 220px;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -4014,6 +4018,10 @@ body{
 
   .md\:max-w-\[420px\]{
     max-width: 420px;
+  }
+
+  .md\:max-w-\[260px\]{
+    max-width: 260px;
   }
 
   .md\:grid-cols-2{

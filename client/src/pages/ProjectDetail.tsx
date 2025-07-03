@@ -2,6 +2,7 @@ import { useRoute, Link } from "wouter";
 import { ArrowLeft, Calendar, MapPin, Users } from "lucide-react";
 import { getProjectBySlug } from "@/data/projects";
 import Footer from "@/components/Footer";
+import { useState } from "react";
 
 // PROJECT DETAIL PAGE
 // ===================
@@ -138,7 +139,7 @@ const ProjectDetail = () => {
                 <img
                   src={image}
                   alt={`${project.title} - Image ${index + 2}`}
-                  className="object-contain w-full max-h-[300px] rounded-lg shadow"
+                  className="object-contain w-full max-h-[300px] rounded-lg shadow mx-auto"
                 />
               </div>
             ))}
