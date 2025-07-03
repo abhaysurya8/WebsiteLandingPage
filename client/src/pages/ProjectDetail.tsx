@@ -1,6 +1,7 @@
 import { useRoute, Link } from "wouter";
 import { ArrowLeft, Calendar, MapPin, Users } from "lucide-react";
 import { getProjectBySlug } from "@/data/projects";
+import Footer from "@/components/Footer";
 
 // PROJECT DETAIL PAGE
 // ===================
@@ -94,20 +95,6 @@ const ProjectDetail = () => {
           </div>
         </div>
 
-        {/* Additional Images */}
-        {project.images.length > 1 && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-            {project.images.slice(1).map((image: string, index: number) => (
-              <img
-                key={index}
-                src={image}
-                alt={`${project.title} - Image ${index + 2}`}
-                className="w-full h-64 md:h-80 object-cover rounded-lg"
-              />
-            ))}
-          </div>
-        )}
-
         {/* Project Details */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
           <div>
@@ -129,7 +116,7 @@ const ProjectDetail = () => {
         </div>
 
         {/* Key Features */}
-        <div>
+        <div className="mb-12">
           <h3 className="text-aakaara-text font-playfair text-[24px] font-medium mb-6">
             Key Features
           </h3>
@@ -142,24 +129,23 @@ const ProjectDetail = () => {
             ))}
           </ul>
         </div>
-      </div>
 
-      {/* Footer */}
-      <footer className="bg-aakaara-dark-brown text-aakaara-light-brown">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-8">
-          <h2 className="font-playfair text-[28px] md:text-[32px] leading-[38px] font-normal border-b border-aakaara-light-brown/30 pb-4 mb-6">
-            Ar. Shivangi Shivakumar
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-normal">
-            <div>+91 99726 81819</div>
-            <div>contact@aakaarastudio.in</div>
-            <div>
-              Nagasandra,<br />
-              Bangalore- 560073.
-            </div>
+        {/* Gallery Images (all except the first) */}
+        {project.images.length > 1 && (
+          <div className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-auto">
+            {project.images.slice(1).map((image: string, index: number) => (
+              <div key={index} className="flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
+                <img
+                  src={image}
+                  alt={`${project.title} - Image ${index + 2}`}
+                  className="object-contain w-full max-h-[300px] rounded-lg shadow"
+                />
+              </div>
+            ))}
           </div>
-        </div>
-      </footer>
+        )}
+      </div>
+      <Footer />
     </div>
   );
 };

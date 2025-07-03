@@ -1,6 +1,6 @@
 export default function ServicesSection() {
   return (
-    <div className="max-w-[1200px] mx-auto flex flex-row justify-between items-stretch px-6 md:px-12 py-12 md:py-20 relative">
+    <div className="flex flex-row w-full min-h-[600px]">
       <div className="flex-1 pr-0 md:pr-20">
         <h1 className="text-[#7f6a4d] font-quicksand text-[28px] md:text-[32px] leading-[36px] md:leading-[42px] font-normal mb-4">
           Redefining Spaces with Expertise in Architecture, Interiors, and Landscape Design.
@@ -28,9 +28,8 @@ export default function ServicesSection() {
           </ul>
         </div>
       </div>
-      {/* Fixed vertical brown strip on the right edge of the window */}
-      <aside className="hidden md:flex flex-col items-center justify-center fixed top-0 right-0 h-screen w-[220px] bg-[#5a3a22] z-40">
-        <div className="flex flex-col items-center justify-center gap-6">
+      <aside className="hidden md:flex flex-col items-center justify-center bg-[#5a3a22] w-[220px] min-h-screen flex-shrink-0">
+        <div className="flex flex-col items-center justify-center gap-6 h-full">
           <span className="font-rigot text-[48px] font-bold leading-[48px] select-none text-[#d9c4b0] vertical-text">
             aakaara
           </span>

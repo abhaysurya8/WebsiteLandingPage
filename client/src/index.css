@@ -212,4 +212,10 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /* Custom vertical writing mode utility */
+  .writing-mode-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
 }

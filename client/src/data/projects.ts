@@ -120,7 +120,15 @@ export const projectList: Project[] = [
     category: "Landscape",
     image: "https://images.unsplash.com/photo-1585128792020-803d29415281?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     description: "Harmonious blend between built environment and rural landscape maintaining rustic charm and sustainable living."
-  }
+  },
+  {
+    id: 12,
+    slug: "sumitha-residence",
+    title: "Sumitha Residence",
+    category: "Architecture",
+    image: "/Images/sumitha 1.jpg",
+    description: "This residential project in Bangalore embodies modern elegance combined with functional design. The goal was to create a serene and inviting living space that seamlessly integrates with its natural surroundings while prioritizing comfort and sustainability. The architecture emphasizes clean lines and open spaces, featuring a minimalist façade of natural stone and glass. Large windows invite ample natural light, creating a strong indoor-outdoor connection. The result is a home that not only meets the practical needs of modern living but also serves as a sanctuary where the family can create lasting memories."
+  },
   
   // TO ADD MORE PROJECTS: Follow the same structure above
   // {
@@ -145,9 +153,11 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     client: "Private Residence",
     area: "3,200 sq ft",
     images: [
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800",
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=800"
+      "/Images/ujjwal 1.jpg",
+      "/Images/ujjwal 2.jpg",
+      "/Images/ujjwal 3.jpg",
+      "/Images/ujjwal 4.jpg",
+      "/Images/ujjwal 5.jpg"
     ],
     description: "The interiors feature a mix of warm, natural materials and bold, dynamic accents. Modular furniture, biophilic design elements, and varied work zones create an inspiring and adaptable environment.",
     challenge: "Creating an inspiring and adaptable living environment that accommodates both individual and family needs.",
@@ -375,6 +385,32 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
       "Open-plan living",
       "Natural materials",
       "Large windows"
+    ]
+  },
+  "sumitha-residence": {
+    slug: "sumitha-residence",
+    title: "Sumitha Residence",
+    category: "Architecture",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Private Residence",
+    area: "2,200 sq ft",
+    images: [
+      "/Images/sumitha 1.jpg",
+      "/Images/sumitha 2.png",
+      "/Images/sumitha 3.png",
+      "/Images/sumitha 4.png",
+      "/Images/sumitha 5.png"
+    ],
+    description: "This residential project in Bangalore embodies modern elegance combined with functional design. The goal was to create a serene and inviting living space that seamlessly integrates with its natural surroundings while prioritizing comfort and sustainability. The architecture emphasizes clean lines and open spaces, featuring a minimalist façade of natural stone and glass. Large windows invite ample natural light, creating a strong indoor-outdoor connection. The result is a home that not only meets the practical needs of modern living but also serves as a sanctuary where the family can create lasting memories.",
+    challenge: "Designing a home that balances modern elegance with comfort and sustainability.",
+    solution: "Emphasized open layouts, natural materials, and large windows for light and connection to nature.",
+    features: [
+      "Minimalist façade of natural stone and glass",
+      "Open-plan living spaces",
+      "Large windows for natural light",
+      "Indoor-outdoor connection",
+      "Sustainable design elements"
     ]
   }
 };

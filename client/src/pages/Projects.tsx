@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { projectList, getAllCategories } from "@/data/projects";
+import Footer from "@/components/Footer";
 
 // PROJECTS PAGE
 // =============
@@ -67,23 +68,7 @@ const Projects = () => {
           </p>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="bg-aakaara-dark-brown text-aakaara-light-brown">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-8">
-          <h2 className="font-playfair text-[28px] md:text-[32px] leading-[38px] font-normal border-b border-aakaara-light-brown/30 pb-4 mb-6">
-            Ar. Shivangi Shivakumar
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-normal">
-            <div>+91 99726 81819</div>
-            <div>contact@aakaarastudio.in</div>
-            <div>
-              Nagasandra,<br />
-              Bangalore- 560073.
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
@@ -109,7 +94,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       className="group block animate-slide-up"
       style={{ animationDelay: `${(index % 12) * 0.05}s` }}
     >
-      <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100/60 hover:border-aakaara-brown/20">
+      <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
         <div className="relative overflow-hidden">
           <img
             src={project.image}

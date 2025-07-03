@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import Footer from "@/components/Footer";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -250,23 +251,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
-      <footer className="bg-aakaara-dark-brown text-aakaara-light-brown">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-8">
-          <h2 className="font-playfair text-[28px] md:text-[32px] leading-[38px] font-normal border-b border-aakaara-light-brown/30 pb-4 mb-6">
-            Ar. Shivangi Shivakumar
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-[14px] md:text-[16px] leading-[20px] md:leading-[24px] font-normal">
-            <div>+91 99726 81819</div>
-            <div>contact@aakaarastudio.in</div>
-            <div>
-              Nagasandra,<br />
-              Bangalore- 560073.
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
