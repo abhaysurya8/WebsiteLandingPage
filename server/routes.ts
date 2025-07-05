@@ -4,28 +4,21 @@ import { storage } from "./storage";
 import { sendContactEmail, type ContactFormData } from "./email";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Contact form endpoint
-  app.post("/api/contact", async (req, res) => {
-    try {
-      const contactData: ContactFormData = req.body;
-      
-      // Basic validation
-      if (!contactData.name || !contactData.email || !contactData.subject || !contactData.message) {
-        return res.status(400).json({ 
-          error: "Missing required fields: name, email, subject, and message are required" 
-        });
-      }
+  // Removed /api/contact POST endpoint
 
-      // Send email
-      const success = await sendContactEmail(contactData);
-      
+  app.post("/api/contact", async (req, res) => {
+    const { name, email, phone, message } = req.body;
+    if (!name || !email || !phone || !message) {
+      return res.status(400).json({ error: "All fields are required" });
+    }
+    try {
+      const success = await sendContactEmail({ name, email, phone, message });
       if (success) {
-        res.json({ message: "Contact form submitted successfully" });
+        res.json({ message: "Message sent successfully" });
       } else {
         res.status(500).json({ error: "Failed to send email" });
       }
-    } catch (error) {
-      console.error(`Contact form error: ${error}`);
+    } catch (err) {
       res.status(500).json({ error: "Internal server error" });
     }
   });

@@ -9,72 +9,52 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    message: "",
-    projectType: ""
+    message: ""
   });
   const [phoneError, setPhoneError] = useState("");
+  const [status, setStatus] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Validate phone number: must have 10 digits at the end
+    setStatus("");
+    // Validate phone number: must have 10 digits
     const digits = formData.phone.replace(/\D/g, "");
     if (digits.length !== 10) {
       setPhoneError("Please enter a valid 10-digit phone number");
       return;
     }
-
+    if (!formData.name || !formData.email || !formData.message) {
+      // Basic frontend required check
+      return;
+    }
     try {
-      // Send email using the backend API
       const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-
       if (response.ok) {
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for your inquiry. We'll get back to you within 24 hours.",
-        });
-        
-        // Reset form
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          message: "",
-          projectType: ""
-        });
+        setStatus("Message sent!");
+        setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
         throw new Error('Failed to send message');
       }
     } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again or contact us directly.",
-        variant: "destructive",
-      });
+      setStatus("Failed to send message. Please try again or contact us directly.");
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     if (name === "phone") {
-      // Allow only numbers, spaces, and optional leading +
-      if (!/^\+?\d*\s*\d*$/.test(value)) {
+      if (!/^[\d+\s]*$/.test(value)) {
         setPhoneError("Please enter a valid phone number");
         return;
       } else {
         setPhoneError("");
       }
     }
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
@@ -96,7 +76,6 @@ const Contact = () => {
             <h2 className="text-aakaara-text font-playfair text-[24px] md:text-[28px] font-normal mb-8">
               Let's Start a Conversation
             </h2>
-            
             <div className="space-y-6 mb-8">
               <div className="flex items-start">
                 <Phone size={20} className="text-aakaara-brown mr-4 mt-1" />
@@ -105,7 +84,6 @@ const Contact = () => {
                   <p className="text-aakaara-text/80">+91 99726 81819</p>
                 </div>
               </div>
-              
               <div className="flex items-start">
                 <Mail size={20} className="text-aakaara-brown mr-4 mt-1" />
                 <div>
@@ -113,7 +91,6 @@ const Contact = () => {
                   <p className="text-aakaara-text/80">contact@aakaarastudio.in</p>
                 </div>
               </div>
-              
               <div className="flex items-start">
                 <MapPin size={20} className="text-aakaara-brown mr-4 mt-1" />
                 <div>
@@ -125,7 +102,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
             <div className="bg-aakaara-light-brown/20 rounded-lg p-6">
               <h4 className="text-aakaara-text font-medium mb-3">Office Hours</h4>
               <div className="space-y-2 text-aakaara-text/80">
@@ -144,110 +120,20 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
-          {/* Contact Form */}
-          <div className="animate-slide-in-right">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-aakaara-text font-medium mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-aakaara-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-aakaara-brown focus:border-transparent"
-                    placeholder="Your full name"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-aakaara-text font-medium mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-aakaara-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-aakaara-brown focus:border-transparent"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="phone" className="block text-aakaara-text font-medium mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    maxLength={16}
-                    pattern="^(\+\\d{1,4}[ ]?)?\\d{10}$"
-                    className="w-full px-4 py-3 border border-aakaara-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-aakaara-brown focus:border-transparent"
-                    placeholder="+91 9876543210 or 9876543210"
-                  />
-                  {phoneError && (
-                    <p className="text-red-600 text-xs mt-1">{phoneError}</p>
-                  )}
-                </div>
-                
-                <div>
-                  <label htmlFor="projectType" className="block text-aakaara-text font-medium mb-2">
-                    Project Type
-                  </label>
-                  <select
-                    id="projectType"
-                    name="projectType"
-                    value={formData.projectType}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-aakaara-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-aakaara-brown focus:border-transparent"
-                  >
-                    <option value="">Select project type</option>
-                    <option value="architecture">Architecture</option>
-                    <option value="interior">Interior Design</option>
-                    <option value="landscape">Landscape Design</option>
-                    <option value="consultation">Consultation</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-aakaara-text font-medium mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full px-4 py-3 border border-aakaara-brown/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-aakaara-brown focus:border-transparent resize-vertical"
-                  placeholder="Tell us more about your project, requirements, timeline, and budget..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-aakaara-brown text-aakaara-brown py-3 px-6 rounded-lg font-medium hover:bg-aakaara-dark-brown hover:text-white transition-colors flex items-center justify-center bg-white border-2 border-aakaara-brown"
-              >
-                <Send size={18} className="mr-2" />
-                Send Message
-              </button>
-            </form>
+          {/* Google Form Embed in right column */}
+          <div className="animate-slide-in-right flex items-start justify-center">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSdesFQPRf3ppWjbkWN7vKWHhUA7YHMvNWoPQ6fgOtT0ANswQA/viewform?embedded=true"
+              width="100%"
+              height="900"
+              frameBorder="0"
+              marginHeight={0}
+              marginWidth={0}
+              title="Contact Form"
+              style={{ background: 'white', maxWidth: 600 }}
+            >
+              Loading…
+            </iframe>
           </div>
         </div>
       </div>

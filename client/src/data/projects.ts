@@ -100,7 +100,7 @@ export const projectList: Project[] = [
   {
     id: 10,
     slug: "girish-backyard",
-    title: "Girish's Backyard",
+    title: "Mr. Girish's Backyard",
     category: "Landscape",
     image: "/Images/girish 1.png",
     description: "Farmhouse landscape design enhancing functionality and aesthetic appeal with natural materials and native plants."
@@ -108,7 +108,7 @@ export const projectList: Project[] = [
   {
     id: 11,
     slug: "anil-farmhouse",
-    title: "Anil's Farmhouse",
+    title: "Mr. Anil's Farmhouse",
     category: "Landscape",
     image: "/Images/anil 1.jpg",
     description: "Harmonious blend between built environment and rural landscape maintaining rustic charm and sustainable living."
@@ -116,7 +116,7 @@ export const projectList: Project[] = [
   {
     id: 12,
     slug: "sumitha-residence",
-    title: "Sumitha Residence",
+    title: "Ms. Sumitha's Residence",
     category: "Architecture",
     image: "/Images/sumitha 1.jpg",
     description: "This residential project in Bangalore embodies modern elegance combined with functional design. The goal was to create a serene and inviting living space that seamlessly integrates with its natural surroundings while prioritizing comfort and sustainability. The architecture emphasizes clean lines and open spaces, featuring a minimalist façade of natural stone and glass. Large windows invite ample natural light, creating a strong indoor-outdoor connection. The result is a home that not only meets the practical needs of modern living but also serves as a sanctuary where the family can create lasting memories."
@@ -171,9 +171,9 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     client: "Urban Professionals",
     area: "1,800 sq ft",
     images: [
-      "/Images/sirigere 1.jpg",
-      "/Images/sirigere 2.jpg",
       "/Images/sirigere 3.jpg",
+      "/Images/sirigere 2.jpg",
+      "/Images/sirigere 1.jpg",
       "/Images/sirigere 4.jpg"
     ],
     description: "Located in the bustling heart of Bangalore, this residential apartment project redefines modern urban living with a focus on elegance, functionality, and sustainability.",
@@ -259,7 +259,7 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
   },
   "girish-backyard": {
     slug: "girish-backyard",
-    title: "Girish's Backyard",
+    title: "Mr. Girish's Backyard",
     category: "Landscape",
     location: "Bangalore, Karnataka",
     year: "2024",
@@ -280,7 +280,7 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
   },
   "anil-farmhouse": {
     slug: "anil-farmhouse",
-    title: "Anil's Farmhouse",
+    title: "Mr. Anil's Farmhouse",
     category: "Landscape",
     location: "Bangalore, Karnataka",
     year: "2024",
@@ -361,9 +361,9 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
     client: "Private Residence",
     area: "2,800 sq ft",
     images: [
-      "/Images/kumar 2.jpg",
       "/Images/kumar 3.jpg",
       "/Images/kumar 4.jpg",
+      "/Images/kumar 2.jpg",
       "/Images/kumar 5.jpg",
       "/Images/kumar's 1.jpg"
     ],
@@ -378,7 +378,7 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
   },
   "sumitha-residence": {
     slug: "sumitha-residence",
-    title: "Sumitha Residence",
+    title: "Ms. Sumitha's Residence",
     category: "Architecture",
     location: "Bangalore, Karnataka",
     year: "2024",
@@ -400,6 +400,30 @@ export const projectDetails: { [key: string]: ProjectDetail } = {
       "Large windows for natural light",
       "Indoor-outdoor connection",
       "Sustainable design elements"
+    ]
+  },
+  "kumar-mane": {
+    slug: "kumar-mane",
+    title: "Kumar Mane",
+    category: "Architecture",
+    location: "Bangalore, Karnataka",
+    year: "2024",
+    client: "Private Residence",
+    area: "2,400 sq ft",
+    images: [
+      "/Images/kumar 3.jpg",
+      "/Images/kumar 4.jpg",
+      "/Images/kumar 2.jpg",
+      "/Images/kumar 5.jpg",
+      "/Images/kumar's 1.jpg"
+    ],
+    description: "Modern elegance combined with functional design, creating serene living space integrated with natural surroundings.",
+    challenge: "Creating a serene and functional living space.",
+    solution: "Used open layouts and natural materials for tranquility.",
+    features: [
+      "Open-plan living",
+      "Natural materials",
+      "Large windows"
     ]
   }
 };

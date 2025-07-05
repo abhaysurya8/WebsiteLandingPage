@@ -133,13 +133,13 @@ const ProjectDetail = () => {
 
         {/* Gallery Images (all except the first) */}
         {project.images.length > 1 && (
-          <div className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-auto">
+          <div className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-3 auto-rows-auto">
             {project.images.slice(1).map((image: string, index: number) => (
               <div key={index} className="flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
                 <img
                   src={image}
                   alt={`${project.title} - Image ${index + 2}`}
-                  className="object-contain w-full max-h-[300px] rounded-lg shadow mx-auto"
+                  className="object-contain w-full max-h-[400px] rounded-lg shadow mx-auto"
                 />
               </div>
             ))}
