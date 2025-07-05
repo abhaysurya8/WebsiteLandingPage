@@ -10,7 +10,7 @@ import Navigation from "@/components/Navigation";
 import ScrollToTop from "@/components/ScrollToTop";
 import PageTransition from "@/components/PageTransition";
 import LoadingScreen from "@/components/LoadingScreen";
-import Home from "@/pages/Home";
+import Home from "@/pages/home";
 import About from "@/pages/About";
 import Projects from "@/pages/Projects";
 import ProjectDetail from "@/pages/ProjectDetail";
