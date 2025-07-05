@@ -1,61 +1,7 @@
-import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Footer from "@/components/Footer";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
-  const [phoneError, setPhoneError] = useState("");
-  const [status, setStatus] = useState("");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("");
-    // Validate phone number: must have 10 digits
-    const digits = formData.phone.replace(/\D/g, "");
-    if (digits.length !== 10) {
-      setPhoneError("Please enter a valid 10-digit phone number");
-      return;
-    }
-    if (!formData.name || !formData.email || !formData.message) {
-      // Basic frontend required check
-      return;
-    }
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
-        setStatus("Message sent!");
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      } else {
-        throw new Error('Failed to send message');
-      }
-    } catch (error) {
-      setStatus("Failed to send message. Please try again or contact us directly.");
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    if (name === "phone") {
-      if (!/^[\d+\s]*$/.test(value)) {
-        setPhoneError("Please enter a valid phone number");
-        return;
-      } else {
-        setPhoneError("");
-      }
-    }
-    setFormData({ ...formData, [name]: value });
-  };
 
   return (
     <div className="min-h-screen bg-white pt-16">

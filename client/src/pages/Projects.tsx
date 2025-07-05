@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { projectList, getAllCategories } from "@/data/projects";
+import { projectList } from "@/data/projects";
 import Footer from "@/components/Footer";
 
 // PROJECTS PAGE
@@ -18,11 +18,7 @@ const Projects = () => {
       ? projectList.filter(project => project.category === "Landscape")
       : projectList.filter(project => project.category === "Architecture" || project.category === "Interior Design");
 
-  // Random height generator for varied masonry layout
-  const getRandomHeight = (index: number) => {
-    const heights = ['h-64', 'h-72', 'h-80', 'h-56', 'h-68'];
-    return heights[index % heights.length];
-  };
+
 
   return (
     <div className="min-h-screen bg-white">

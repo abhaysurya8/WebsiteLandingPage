@@ -1,8 +1,6 @@
-import { useFont } from "@/contexts/FontContext";
 import Footer from "@/components/Footer";
 
 const Home = () => {
-  const { logoFont, setLogoFont } = useFont();
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">

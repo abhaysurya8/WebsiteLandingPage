@@ -2,7 +2,6 @@ import { useRoute, Link } from "wouter";
 import { ArrowLeft, Calendar, MapPin, Users } from "lucide-react";
 import { getProjectBySlug } from "@/data/projects";
 import Footer from "@/components/Footer";
-import { useState } from "react";
 
 // PROJECT DETAIL PAGE
 // ===================
