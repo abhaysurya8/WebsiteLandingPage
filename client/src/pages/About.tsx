@@ -9,7 +9,7 @@ const About = () => {
           <div className="flex justify-center lg:justify-start animate-slide-in-left">
             <div className="relative group">
               <img
-                src="/Images/about3.jpg"
+                src="/Images/back4.jpg"
                 alt="Ar. Shivangi Shivakumar"
                 className="w-80 h-80 rounded-full object-cover shadow-lg hover-scale"
                 style={{ objectPosition: 'center 0%' }}
