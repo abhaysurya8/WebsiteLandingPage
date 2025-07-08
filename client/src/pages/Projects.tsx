@@ -12,11 +12,12 @@ const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const categories = ["All", "Architecture & Interior", "Landscape"];
   
-  const filteredProjects = selectedCategory === "All"
+  const filteredProjects = (selectedCategory === "All"
     ? projectList
     : selectedCategory === "Landscape"
       ? projectList.filter(project => project.category === "Landscape")
-      : projectList.filter(project => project.category === "Architecture" || project.category === "Interior Design");
+      : projectList.filter(project => project.category === "Architecture" || project.category === "Interior Design")
+  ).slice().sort((a, b) => a.title.localeCompare(b.title));
 
 
 
