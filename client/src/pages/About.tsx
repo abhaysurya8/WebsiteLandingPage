@@ -12,7 +12,7 @@ const About = () => {
                 src="/Images/back4.jpg"
                 alt="Ar. Shivangi Shivakumar"
                 className="w-80 h-80 rounded-full object-cover shadow-lg hover-scale"
-                style={{ objectPosition: 'center 12%', objectFit: 'cover', transform: 'scale(0.75)' }}
+                style={{ objectPosition: 'center 12%', objectFit: 'cover', transform: 'scale(0.65)' }}
               />
             </div>
           </div>
