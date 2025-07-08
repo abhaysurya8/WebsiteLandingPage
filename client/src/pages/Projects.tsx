@@ -40,7 +40,7 @@ const Projects = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
                   ${selectedCategory === category
-                    ? "bg-aakaara-brown text-white border border-aakaara-brown shadow-lg transform scale-105"
+                    ? "aakaara-brown text-white border border-aakaara-brown shadow-lg transform scale-105"
                     : "bg-white text-aakaara-brown border border-aakaara-brown hover:bg-aakaara-brown/10 hover:text-aakaara-brown"
                   }`}
               >
