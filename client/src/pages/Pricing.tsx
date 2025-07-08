@@ -30,38 +30,38 @@ const Pricing = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-xl overflow-hidden">
             {/* Header Row */}
-            <div className="grid grid-cols-1 md:grid-cols-3">
-              <div className="bg-aakaara-brown text-white p-4 md:p-6 text-center">
-                <h3 className="text-base md:text-lg font-medium text-aakaara-brown bg-white px-3 md:px-4 py-2 rounded">Deliverables</h3>
+            <div className="grid grid-cols-3">
+              <div className="bg-aakaara-brown text-white p-3 md:p-6 text-center">
+                <h3 className="text-xs md:text-lg font-medium text-aakaara-brown bg-white px-2 md:px-4 py-1 md:py-2 rounded">Deliverables</h3>
               </div>
-              <div className="bg-aakaara-brown text-white p-4 md:p-6 text-center border-t md:border-t-0 md:border-l border-aakaara-dark-brown">
-                <h3 className="text-base md:text-lg font-medium text-aakaara-brown bg-white px-3 md:px-4 py-2 rounded">Elegance</h3>
-                <p className="text-xs md:text-sm mt-2 md:mt-3 text-aakaara-brown bg-white px-2 md:px-3 py-1 rounded font-semibold">(₹1,779)</p>
+              <div className="bg-aakaara-brown text-white p-3 md:p-6 text-center border-l border-aakaara-dark-brown">
+                <h3 className="text-xs md:text-lg font-medium text-aakaara-brown bg-white px-2 md:px-4 py-1 md:py-2 rounded">Elegance</h3>
+                <p className="text-xs md:text-sm mt-1 md:mt-3 text-aakaara-brown bg-white px-1 md:px-3 py-0.5 md:py-1 rounded font-semibold">(₹1,779)</p>
               </div>
-              <div className="bg-aakaara-brown text-white p-4 md:p-6 text-center border-t md:border-t-0 md:border-l border-aakaara-dark-brown">
-                <h3 className="text-base md:text-lg font-medium text-aakaara-brown bg-white px-3 md:px-4 py-2 rounded">Elite</h3>
-                <p className="text-xs md:text-sm mt-2 md:mt-3 text-aakaara-brown bg-white px-2 md:px-3 py-1 rounded font-semibold">(₹2,249)</p>
+              <div className="bg-aakaara-brown text-white p-3 md:p-6 text-center border-l border-aakaara-dark-brown">
+                <h3 className="text-xs md:text-lg font-medium text-aakaara-brown bg-white px-2 md:px-4 py-1 md:py-2 rounded">Elite</h3>
+                <p className="text-xs md:text-sm mt-1 md:mt-3 text-aakaara-brown bg-white px-1 md:px-3 py-0.5 md:py-1 rounded font-semibold">(₹2,249)</p>
               </div>
             </div>
 
             {/* Feature Rows */}
             {features.map((feature, index) => (
-              <div key={feature.name} className={`grid grid-cols-1 md:grid-cols-3 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
-                <div className="p-3 md:p-4 border-b md:border-b-0 md:border-r border-gray-200">
-                  <span className="text-aakaara-text font-medium text-sm md:text-base leading-tight">{feature.name}</span>
+              <div key={feature.name} className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
+                <div className="p-2 md:p-4 border-b border-gray-200">
+                  <span className="text-aakaara-text font-medium text-xs md:text-base leading-tight block">{feature.name}</span>
                 </div>
-                <div className="p-3 md:p-4 border-b md:border-b-0 md:border-l border-gray-200 text-center">
+                <div className="p-2 md:p-4 border-b border-l border-gray-200 text-center">
                   {feature.elegant ? (
-                    <Check size={18} className="text-green-600 mx-auto md:w-5 md:h-5" />
+                    <Check size={16} className="text-green-600 mx-auto md:w-5 md:h-5" />
                   ) : (
-                    <span className="text-gray-400 text-lg">×</span>
+                    <span className="text-gray-400 text-sm md:text-base">×</span>
                   )}
                 </div>
-                <div className="p-3 md:p-4 border-b md:border-b-0 md:border-l border-gray-200 text-center">
+                <div className="p-2 md:p-4 border-b border-l border-gray-200 text-center">
                   {feature.elite ? (
-                    <Check size={18} className="text-green-600 mx-auto md:w-5 md:h-5" />
+                    <Check size={16} className="text-green-600 mx-auto md:w-5 md:h-5" />
                   ) : (
-                    <span className="text-gray-400 text-lg">×</span>
+                    <span className="text-gray-400 text-sm md:text-base">×</span>
                   )}
                 </div>
               </div>
