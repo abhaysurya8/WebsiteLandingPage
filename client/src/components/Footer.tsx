@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-quicksand text-[16px] md:text-[18px] leading-[24px] md:leading-[28px] font-normal">
           <div className="md:col-span-2 flex flex-col md:flex-row md:items-center md:gap-8 justify-center md:justify-start">
             <span>+91 99726 81819</span>
-            <span className="mx-0 md:mx-4">|</span>
+            <span className="mx-0 md:mx-4 hidden md:inline">|</span>
             <span>contact@aakaarastudio.in</span>
             <div className="flex justify-center md:justify-start mt-3 md:mt-0 md:ml-4">
               <a
