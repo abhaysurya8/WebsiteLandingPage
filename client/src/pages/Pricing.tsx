@@ -32,7 +32,7 @@ const Pricing = () => {
             {/* Header Row */}
             <div className="grid grid-cols-3">
               <div className="bg-aakaara-brown text-white p-3 md:p-6 text-center">
-                <h3 className="text-xs md:text-lg font-medium text-aakaara-brown bg-white px-2 md:px-4 py-1 md:py-2 rounded">Deliverables</h3>
+                <h3 className="text-xs md:text-lg font-medium text-aakaara-brown bg-white px-2 md:px-4 py-1 md:py-2 rounded">Services</h3>
               </div>
               <div className="bg-aakaara-brown text-white p-3 md:p-6 text-center border-l border-aakaara-dark-brown">
                 <h3 className="text-xs md:text-lg font-medium text-aakaara-brown bg-white px-2 md:px-4 py-1 md:py-2 rounded">Elegance</h3>
