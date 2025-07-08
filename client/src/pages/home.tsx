@@ -35,8 +35,8 @@ const Home = () => {
               Crafting bespoke solutions that seamlessly blend functionality, aesthetics, and sustainability — across scales, climates, and cultures.
             </p>
             <div className="mb-8">
-              <h2 className="text-aakaara-brown text-[17px] md:text-[21px] font-semibold md:font-bold mb-2">Our Services</h2>
-              <ul className="space-y-4 md:list-disc md:pl-6 md:[&>li]:marker:text-aakaara-brown">
+              <h2 className="text-aakaara-brown text-[19px] md:text-[21px] font-bold mb-2">Our Services</h2>
+              <ul className="space-y-4 list-disc pl-6 [&>li]:marker:text-aakaara-brown">
                 <li>
                   <span className="font-bold text-aakaara-brown">Architectural Planning</span>
                   <div className="text-aakaara-text text-[15px] md:text-[16px]">Shaping spaces with purpose and vision.</div>
