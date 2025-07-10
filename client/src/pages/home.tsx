@@ -58,18 +58,13 @@ const Home = () => {
         <div className="bg-aakaara-dark-brown w-full md:w-[220px] min-h-[60px] max-h-[120px] md:min-h-screen md:max-h-none flex items-center justify-center">
           <div className="relative flex flex-col items-center justify-center h-full w-full">
             {/* Vertical branding only on md+ */}
-            <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex-row items-center justify-center">
-              <div className="relative z-10 flex flex-col items-start justify-center text-aakaara-light-brown text-[15px] font-normal space-y-4 ml-4"
-                style={{
-                  position: 'absolute',
-                  right: '47%'
-                }}
-              >
-                <p className="text-left">Architecture</p>
-                <p className="text-left">Interior</p>
-                <p className="text-left">Landscape</p>
+            <div className="hidden md:flex flex-col items-center justify-center w-full h-full space-y-6">
+              <div className="flex flex-col items-center text-aakaara-light-brown text-[18px] font-normal z-10">
+                <p className="text-center">Architecture</p>
+                <p className="text-center">Interior</p>
+                <p className="text-center">Landscape</p>
               </div>
-              <div className="font-rigot font-bold text-[100px] text-aakaara-light-brown select-none pointer-events-none" style={{ transform: 'rotate(-90deg)', whiteSpace: 'nowrap', lineHeight: 1, zIndex: 0 }}>
+              <div className="font-rigot font-bold text-[60px] text-aakaara-light-brown select-none pointer-events-none" style={{ transform: 'rotate(-90deg)', whiteSpace: 'nowrap', lineHeight: 1, zIndex: 0 }}>
                 aakaara
               </div>
             </div>
