@@ -11,8 +11,8 @@ const About = () => {
               <img
                 src="/Images/back4.jpg"
                 alt="Ar. Shivangi Shivakumar"
-                className="w-80 h-80 rounded-full object-cover shadow-lg hover-scale"
-                style={{ objectPosition: 'left center', objectFit: 'cover', transform: 'scale(0.95)' }}
+                className="w-80 h-80 rounded-full object-contain shadow-lg hover-scale"
+                style={{ objectPosition: 'center', objectFit: 'contain', transform: 'scale(0.95)' }}
               />
             </div>
           </div>
